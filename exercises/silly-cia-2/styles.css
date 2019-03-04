@@ -1,0 +1,28 @@
+h1{
+   color: #006400;
+}
+
+.headers{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+div p{
+    line-height: 25px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#linkIntro{
+    text-transform: uppercase;
+}
+
+img{
+    float: left;
+}

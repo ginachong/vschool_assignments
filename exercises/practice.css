@@ -1,0 +1,13 @@
+span {
+    background-color: #0FB565;
+    color: #F4FEFF;
+    padding: 20px;
+}
+
+.little-border {
+    border: 1px dashed red;
+}
+
+.big-border {
+    border: 10px dashed red;
+}

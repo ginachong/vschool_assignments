@@ -1,0 +1,113 @@
+/* * {
+    box-sizing: border-box; 
+    font-size: 0px;
+}
+
+#row1 {
+    padding-bottom: 90px;
+    border: 20px;
+    background-color: #F5C6D6;
+    margin: 20px;
+}
+
+#row2 {
+    padding-bottom: 90px;
+    background-color: #EE2E84;
+    border: 600px;
+    margin: 20px;
+}
+
+.row3 {
+    padding-bottom: 90px;
+    background-color: #85CFD8;
+
+}
+
+.row4 {
+    width: 200px;
+    height: 90px;
+    align-content: center;
+    background-color: #F5C6D6;
+}
+
+#row4block1 {
+    width: 200px;
+    height: 90px;
+    align-content: center;
+    background-color: #F5C6D6;
+}
+
+#row4block2 {
+    width: 200px;
+    height: 90px;
+    align-content: center;
+    background-color: #F5C6D6;
+} */
+
+
+
+.row1 {
+    grid-area: row1;
+    background-color: #F5C6D6;
+    padding: 70px;
+}
+.row2column1, .row2column2, .row2column3, .row2column4 {
+    background-color: #EE2E84;
+    padding: 70px;
+}
+
+.row2column1{grid-area: row2column1;}
+.row2column2{
+    grid-area: row2column2;
+    margin-right: 2px;
+}
+.row2column3{
+    grid-area: row2column3;
+    margin-left: 2px;
+}
+.row2column4{grid-area: row2column4;}
+
+.row3column1, .row3column2 {
+    background-color: #85CFD8;
+    padding: 70px;
+}
+.row3column1{
+    grid-area: row3column1;
+    margin-right: 2px;
+}
+.row3column2{
+    grid-area: row3column2;
+    margin-left: 2px;
+}
+
+.row4green {
+    grid-area: row4green;
+    background-color: #8DC63F;
+    padding: 70px;
+}
+.row4orange {
+    grid-area: row4orange;
+    background-color: #E76E34;
+    padding: 70px;
+}
+
+.grid-container {
+    display: grid;
+    grid:
+    'row1 row1 row1 row1'
+    'row2column1 row2column2 row2column3 row2column4'
+    'row3column1 row3column1 row3column2 row3column2'
+    'row4green row4green row4green row4orange';
+    grid-gap: 10px;
+    background-color: white;
+    padding: 30px;
+}
+
+.grid-container > div {
+    border: 100px;
+}
+
+
+/* LEARNED: -only DIRECT CHILD containers can become grid items.
+            -to call multiple classes, put a comma between each
+            -

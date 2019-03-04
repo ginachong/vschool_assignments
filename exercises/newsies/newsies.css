@@ -1,0 +1,77 @@
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+h3 {
+    font-family: 'Domine', serif;
+    font-size: 30px;
+}
+
+h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h6 {
+    text-align: center;
+    font-size: 15px;
+}
+
+.header {
+    text-align: center;
+}
+
+#classifieds {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    display: block;
+}
+
+/* hr {
+    display: inline;
+    width: 100%;
+} */
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+#article1 {
+    padding-right: 20px;
+    display: block;
+    width: 100%;
+}
+
+#columns {
+    column-count: 3;
+    column-rule-style: solid;
+    column-width: 10px;
+    display: inline-block;
+}
+
+#column1 {
+    column-span: none;
+}
+
+#column2 {
+    column-span: none;
+}
+
+
+
+/* LEARNED:
+--text-align: center did not work when I used an ID for button. 
+It DID work when I put it inside of a div and used text-align 
+under the div class */
+
