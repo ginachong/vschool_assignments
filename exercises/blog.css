@@ -1,0 +1,27 @@
+
+nav {
+    position: fixed;
+    top: 0;
+    background-color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+}
+
+.blogPosts {
+    text-align: center;
+}
+
+img {
+    display: inline;
+    width: 300px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    display: inline;
+}

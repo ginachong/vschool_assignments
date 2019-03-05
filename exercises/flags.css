@@ -1,0 +1,221 @@
+
+.france {
+    position: relative; 
+    /* relateive so we can position children absolute inside */
+    height: 200px;
+    margin: auto;
+    /* margin auto to center the flag */
+    width: 35%;
+    margin-bottom: 10px;
+    border-style: solid;
+}
+/* this selector is for every div that is a child of .france */
+.france div {
+    width: 33%;
+    height: 200px;
+    position: absolute;
+}
+/* Select blue, and tell it to be all the way to the left, and red all the way to the right */
+.blue {
+    left: 0;
+    background-color: blue;
+}
+.red {
+    right: 0;
+    background-color: red;  
+}
+
+.germany {
+    position: relative;
+    height: 200px;
+    width: 35%;
+    margin: auto;
+    background-color: red;
+    margin-bottom: 10px;
+    border-style: solid;
+}
+
+.germany div {
+    height: 33%;
+    width: 100%;
+    position: absolute;
+}
+
+.black {
+    background-color: black;
+}
+
+.yellow {
+    background-color: yellow;
+    bottom: 0px;
+}
+
+.madagascar {
+    position: relative;
+    margin: auto;
+    width: 35%;
+    height: 200px;
+    border-style: solid;
+    margin-bottom: 10px;
+}
+
+.madagascar div {
+    position: absolute;
+    width: 66%;
+    height: 50%;
+}
+
+.redMadagascar {
+    top: 0%;
+    right: 0%;
+    background-color: red;
+}
+
+.green {
+    bottom: 0%;
+    right: 0%;
+    background-color: green;
+}
+
+.switzerland {
+    position: relative;
+    width: 35%;
+    height: 200px;
+    background-color: red;
+    border-style: solid;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.stripe1 {
+    position: absolute;
+    width: 123px;
+    height: 40px;
+    top: 40%;
+    left: 34%;
+    background-color: white;
+}
+
+.stripe2 {
+    position: absolute;
+    height: 120px;
+    width: 40px;
+    top: 20%;
+    left: 45%;
+    background-color: white;
+}
+
+.sweden {
+    position: relative;
+    width: 35%;
+    height: 200px;
+    border: solid;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: #429ef4;
+}
+
+.yellowStripe1 {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background-color: yellow;
+    left: 30%;
+}
+
+.yellowStripe2 {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: yellow;
+    top: 40%;
+}
+
+.gambia {
+    position: relative;
+    width: 35%;
+    height: 200px;
+    border: solid;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.redGambia {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background-color: red;
+    top: 0%;
+}
+
+.blueGambia {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: blue;
+    top: 40%;
+}
+
+.greenGambia {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background-color: green;
+    bottom: 0%;
+}
+
+.tonga {
+    position: relative;
+    width: 35%;
+    height: 200px;
+    border: solid;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: red;
+}
+
+.white {
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    top: 0%;
+    left: 0%;
+    background-color: white;
+}
+
+.redStripe1 {
+    position: absolute;
+    background-color: red;
+    width: 30px;
+    height: 75%;
+    left: 40%;
+    top: 10%;
+}
+
+.redStripe2 {
+    position: absolute;
+    background-color: red;
+    width: 70%;
+    height: 30px;
+    left: 15%;
+    top: 35%;
+}
+
+.japan {
+    position: relative;
+    width: 35%;
+    height: 200px;
+    border: solid;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.redCircle {
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    left: 36%;
+    top: 25%;
+}
