@@ -1,0 +1,27 @@
+/* 
+#add #subtract #multiply {
+    border: solid;
+    height: 200px;
+    width: 200px;
+} */
+
+
+.calculator form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+form[name=add] {
+    background-color: pink;
+}
+
+form[name=subtract] {
+    background-color: lightblue;
+}
+
+form[name=multiply] {
+    background-color: purple;
+}
+

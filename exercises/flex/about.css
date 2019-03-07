@@ -1,0 +1,11 @@
+img {
+    width: 40%;
+    float: left;
+    display: inline;
+    margin-right: 15px;
+}
+
+p {
+    display: inline;
+    font-size: 20px;
+}

@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header {
+    font-family: 'Allura', cursive;
+    font-size: 25px;
+    padding-bottom: 105%;
+    padding-left: 5%;
+}
+
+h3 {
+    display: inline;
+
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.leftColumn {
+    position: relative;
+}
+
+/* make padding dynamic */
+.goombas, .bobombs, .cheepcheeps, .total {
+    position: relative;
+    border: solid;
+    border-width: thin;
+    border-color: #ededed;
+    padding-left: 350px;
+    padding-right: 350px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.baddies {
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+    font-family: 'Cormorant', serif;
+    font-size: 18px;
+}
+
+.footer {
+    /* display: flex; */
+    /* flex-direction: column; */
+    position: absolute;
+    bottom: 0%;
+    background-color: #ededed;
+    padding-right: 500px;
+    padding-left: 5px;
+    font-family: 'Crimson Text', serif;
+}
+
+/* .footerInfo {
+    position: absolute;
+    left: 10%;
+} */
+
+input {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+}
+
+label {
+    position: absolute;
+    bottom: 10%;
+    right: 25%;
+    font-family: 'Cormorant', serif;
+    font-size: 18px;
+}
+
+.goombas img {
+    position: absolute;
+    bottom: 28%;
+    left: 5%;
+    max-height: 50px;
+}
+
+.bobombs img {
+    position: absolute;
+    bottom: 28%;
+    left: 5%;
+    max-height: 75px;
+}
+
+.cheepcheeps img {
+    position: absolute;
+    bottom: 28%;
+    left: 5%;
+    max-height: 80px;
+}
+
+#totalBaddies {
+    font-family: 'Cormorant', serif;
+    font-size: 40px;
+    bottom: 13%;
+    left: 25%;
+}
+
+#finalTotal {
+    position: absolute;
+    left: 50%;
+    bottom: 13%;
+    font-family: 'Cormorant', serif;
+    font-size: 50px;
+}
+
+button {
+    font-size: 18px;
+    font-family: 'Cormorant', serif;
+    position: absolute;
+    right: 4%;
+    top: 20%;
+}
+
+.totalButton {
+    position: relative;
+    padding-left: 350px;
+    padding-right: 350px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+

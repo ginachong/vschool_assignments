@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="mario.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant|Allura|Crimson+Text" rel="stylesheet">
+</head>
+<body>
+
+    <div class="leftColumn">
+        <header>
+            <h1>Mario Pest Control</h1>
+        </header>
+
+        <div class="footer">
+            <p class="footerInfo">mario@marioworld.com</p>
+            <p class="footerInfo">www.mariopestcontrol.com</p>
+            <p class="footerInfo">Mario Pest Control<br>123 Rainbow Road<br>MarioWorld, CA 95641</p>
+        </div>
+    </div>
+<form>
+    <div class="rightColumn">
+        <div class="goombas">
+            <img src="https://i.pinimg.com/originals/ec/48/44/ec4844738f07f32aecbad91b1fc604f8.jpg">
+            <p class="baddies"><b>Goombas</b> - 5 coins</p>
+            <label>Number Caught: </label>
+            <input id="goombaTotal" type="number" min="0" max="100" name="totalGoombas">
+        </div>
+
+        <div class="bobombs">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/31xrQzIMvUL.jpg">
+            <p class="baddies"><b>Bob-ombs</b> - 7 coins</p>
+            <label>Number Caught: </label>
+            <input id="bobombTotal" type="number" min="0" max="100" name="totalBobombs">
+        </div>
+
+        <div class="cheepcheeps">
+            <img src="http://www.supercoloring.com/sites/default/files/styles/coloring_medium/public/cif/2015/12/yoshi-catches-cheep-cheep-fish-coloring-page.png">
+            <p class="baddies"><b>Cheep-cheeps</b> - 11 coins</p>
+            <label>Number Caught: </label>
+            <input id="cheepTotal" type="number" min="0" max="100" name="totalCheeps">
+        </div>
+
+        <div class="totalButton">
+            <button id="totalButton">Click for Total</button>
+        </div>
+
+        <div class="total">
+            <p class="baddies" id="totalBaddies">Total: </p>
+            <p id="finalTotal"></p>
+        </div>
+
+
+    </div>
+</form>
+
+
+    <script src="mario.js"></script>
+</body>
+</html>

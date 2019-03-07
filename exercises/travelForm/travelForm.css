@@ -1,0 +1,14 @@
+form[name=flyer] {
+    display: flex;
+    flex-direction: column;
+    margin-left: 38%;
+    margin-right: 38%;
+    margin-top: 40px;
+    background-color: #eff9f9;
+    padding: 20px;
+    border-radius: 5%;
+}
+
+input[name=gender]{
+    display: inline;
+}
