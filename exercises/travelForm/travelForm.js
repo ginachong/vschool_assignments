@@ -32,8 +32,16 @@ var flyerObject = {
     diet: checkedDiet().toString()
 }
 
-document.flyer.submit.addEventListener("click", function(e){
+document.flyer.addEventListener("submit", function(e){
     e.preventDefault();
+    var flyerObject = {
+        firstName: document.flyer.firstName.value,
+        lastName: document.flyer.lastName.value,
+        age: document.flyer.age.value,
+        gender: document.flyer.gender.value,
+        location: checkedCities().toString(), //.join()
+        diet: checkedDiet().toString()
+    };
     alert(
         `First Name: ${flyerObject.firstName}
          Last Name: ${flyerObject.lastName}

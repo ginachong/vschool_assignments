@@ -1,31 +1,55 @@
 body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-header {
-    font-family: 'Allura', cursive;
-    font-size: 25px;
-    padding-bottom: 105%;
-    padding-left: 5%;
-}
-
-h3 {
-    display: inline;
-
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .rightColumn {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .leftColumn {
-    position: relative;
+    display: grid;
+    grid-template-rows: auto 25%;
+    grid-gap: 1%;
 }
 
-/* make padding dynamic */
+.footer {
+    background-color: lightcyan;
+    /* padding-right: 500px;
+    padding-left: 5px; */
+    font-family: 'Crimson Text', serif;
+}
+
+header {
+    position: relative;
+    font-family: 'Allura', cursive;
+    font-size: 25px; 
+    border: solid;
+    border-width: thin;
+    border-color: #ededed;
+}
+
+h1 {
+    position: absolute;
+    left: 5%;
+}
+
+header img {
+    position: absolute;
+    max-height: 80px;
+    right: 33%;
+    top: 3%;
+}
+
+header p {
+    position: absolute;
+    bottom: 40%;
+    left: 33%;
+    font-size: 35px;
+}
+
 .goombas, .bobombs, .cheepcheeps, .total {
     position: relative;
     border: solid;
@@ -45,22 +69,6 @@ h3 {
     font-size: 18px;
 }
 
-.footer {
-    /* display: flex; */
-    /* flex-direction: column; */
-    position: absolute;
-    bottom: 0%;
-    background-color: #ededed;
-    padding-right: 500px;
-    padding-left: 5px;
-    font-family: 'Crimson Text', serif;
-}
-
-/* .footerInfo {
-    position: absolute;
-    left: 10%;
-} */
-
 input {
     position: absolute;
     bottom: 10%;
@@ -70,7 +78,7 @@ input {
 label {
     position: absolute;
     bottom: 10%;
-    right: 25%;
+    right: 15%;
     font-family: 'Cormorant', serif;
     font-size: 18px;
 }
@@ -96,7 +104,7 @@ label {
     max-height: 80px;
 }
 
-#totalBaddies {
+ #totalBaddies {
     font-family: 'Cormorant', serif;
     font-size: 40px;
     bottom: 13%;

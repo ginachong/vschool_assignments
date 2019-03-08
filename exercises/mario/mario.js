@@ -7,5 +7,7 @@ var showTotal = document.getElementById("finalTotal");
 
 button.addEventListener("click", function(e){
     e.preventDefault();
-    showTotal.textContent = Number(goombas.value) + Number(bobombs.value) + Number(cheeps.value);
+    showTotal.textContent = (Number(goombas.value) * 5 + 
+    Number(bobombs.value) * 7 + Number(cheeps.value) * 11) + " coins";
 })
+
