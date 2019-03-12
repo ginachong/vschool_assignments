@@ -7,15 +7,113 @@ body {
 
 body div {
     border: solid;
-    width: 
-    height: 100%;
+    border-width: thin;
+    padding: 45%;
 }
 
 .box1 {
     background-color: #ccdef9;
-    
 }
 
-.box1 :hover {
+.box1:hover {
+    background-color: #5d9afc;
+    -webkit-transition: border-radius, background-color 1s ease-in; 
+    -moz-transition: border-radius, background-color 1s ease-in; 
+    -o-transition: border-radius, background-color 1s ease-in;
+    transition: border-radius, background-color 1s ease-in;
+    border-color: pink;
+    border-radius: 50%;
+}
 
+.box1:hover::after {
+    content: "Say";
+}
+.box2 {
+    background-color: #edccff;
+}
+
+.box2:hover {
+    background-color: #cb75f9;
+    -webkit-transition: opacity, background-color 1s ease-in; 
+    -moz-transition: opacity, background-color 1s ease-in; 
+    -o-transition: opacity, background-color 1s ease-in;
+    transition: opacity, background-color 1s ease-in;
+    border-color: rgb(255, 192, 203);
+    opacity: 0.5;
+}
+
+.box2:hover::after {
+    content: "hello";
+}
+
+.box3 {
+    background-color: hsl(144, 100%, 90%);
+}
+
+.box3:hover {
+    background-color: hsl(133, 94%, 67%);
+    -webkit-transition: box-shadow, background-color 1s ease-in; 
+    -moz-transition: box-shadow, background-color 1s ease-in; 
+    -o-transition: box-shadow, background-color 1s ease-in;
+    transition: box-shadow, background-color 1s ease-in;
+    border-color: rgb(255, 192, 203);
+    box-shadow: 10px 10px 50px;
+}
+
+.box3:hover::after {
+    content: "to";
+}
+
+.box4 {
+    background-color: rgb(245, 254, 204);
+}
+
+.box4:hover {
+    background-color: rgb(212, 223, 63);
+    -webkit-transition: box-shadow, background-color 1s ease-in; 
+    -moz-transition: box-shadow, background-color 1s ease-in; 
+    -o-transition: box-shadow, background-color 1s ease-in;
+    transition: box-shadow, background-color 1s ease-in;
+    border-color: rgb(255, 192, 203);
+    box-shadow: -10px -10px 50px;
+}
+
+.box4:hover::after {
+    content: "my";
+}
+
+.box5 {
+    background-color: rgb(254, 210, 204);
+}
+
+.box5:hover {
+    background-color: hsla(4, 86%, 78%, 0.815);
+    -webkit-transition: border-style, background-color 1s ease-in; 
+    -moz-transition: border-style, background-color 1s ease-in; 
+    -o-transition: border-style, background-color 1s ease-in;
+    transition: border-style, background-color 1s ease-in;
+    border-style: dotted;
+    border-width: thick;
+}
+
+.box5:hover::after {
+    content: "secret";
+}
+
+.box6 {
+    background-color: hsl(144, 100%, 90%);
+}
+
+.box6:hover {
+    background-color: hsl(133, 94%, 67%);
+    -webkit-transition: background-color 1s ease-in; 
+    -moz-transition: background-color 1s ease-in; 
+    -o-transition: background-color 1s ease-in;
+    transition: background-color 1s ease-in;
+    border-color: rgb(255, 192, 203);
+    border-radius: 10%;
+}
+
+.box6:hover::after {
+    content: "message";
 }
