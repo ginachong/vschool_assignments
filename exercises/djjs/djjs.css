@@ -1,0 +1,21 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10%;
+}
+
+body div {
+    border: solid;
+    width: 
+    height: 100%;
+}
+
+.box1 {
+    background-color: #ccdef9;
+    
+}
+
+.box1 :hover {
+
+}

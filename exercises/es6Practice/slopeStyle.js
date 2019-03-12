@@ -64,13 +64,17 @@
 
 //Black Diamond
 
-product = (...numbers) => {  
+// product = (...numbers) => {  
   
-    return numbers.reduce(function(acc, number) {
-      return acc * number;
-    }, 1)
-  }
+//     return numbers.reduce(function(acc, number) {
+//       return acc * number;
+//     }, 1)
+//   }
 
-  console.log(product(a, b, c, d, e));
+//   console.log(product(a, b, c, d, e));
+
+
+// Ternary Operator
+
 
 
