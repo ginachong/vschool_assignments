@@ -1,6 +1,6 @@
-let emptyString = "";
 
 antiCaps = (str) => {
+    let emptyString = "";
     for(var i = 0; i < str.length; i++){
         let char = str[i];
         if(char == char.toUpperCase())
