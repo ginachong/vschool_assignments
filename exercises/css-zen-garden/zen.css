@@ -1,0 +1,211 @@
+
+.container {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto auto auto auto 1fr;   /* why doesn't it work when I do all fr?? */
+    grid-template-areas: 
+    "one one one"
+    "two two three"
+    "four four five"
+    "six six seven"
+    "eight eight eight"
+    "nine nine nine";
+}
+
+/* .container > div {
+    border: solid;
+}
+ */
+.one {
+    grid-area: one;
+    grid-column: 1 / -1;      /* this is important because i needed the image to go behind both div 1 and div 2 */
+    background-image: url("http://www.csszengarden.com/214/noise.png"), url("http://www.csszengarden.com/214/gridlines-opaque.png"), url("http://www.csszengarden.com/214/contours-opaque.png"), url("http://www.csszengarden.com/214/huntington.jpg");
+    position: relative;
+    height: 250px;
+}
+
+.one > h1 {
+    color: white;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 100;
+    font-size: 300%;
+    position: absolute;
+    left: 200px;
+    top: 80px;
+}
+
+.one > h2 {
+    font-family: 'Libre Baskerville', sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    position: absolute;
+    left: 200px;
+    top: 140px;
+    color: white;
+    opacity: 0.6;
+}
+
+.one > h2 span {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+.stripe1 {
+    position: absolute;
+    top: 0%;
+    padding-bottom: 20px;
+    padding-left: 100%;
+    background-color: #3e5d67;
+    opacity: 0.3;
+}
+
+.stripe2 {
+    position: absolute;
+    top: 4%;
+    padding-bottom: 4px;
+    padding-left: 100%;
+    background-color: #3e5d67;
+}
+
+.stripe3 {
+    position: absolute;
+    top: 0%;
+    padding-bottom: 10px;
+    padding-left: 100%;
+    background-color: #325050;
+    opacity: 0.6;
+}
+
+.box {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    padding: 16.65%;
+    background-color: black;
+    opacity: 0.1;
+}
+
+.viewDesigns {
+    position: absolute;
+    padding-top: 50px;
+    padding-left: 15%;
+    background-color: white;
+    opacity: 0.1;
+    right: 10.5%;
+    top: 40%;
+    min-width: 165px;
+}
+
+.arrowBox {
+    position: absolute;
+    padding-top: 50px;
+    padding-left: 3.6%;
+    background-color: white;
+    opacity: 0.1;
+    right: 6.75%;
+    top: 40%;
+}
+
+.view {
+    font-family: 'Julius Sans One', sans-serif;
+    color: white;
+    font-weight: 100;
+    position:absolute;
+    top: 46%;
+    right: 12%;
+    opacity: 0.7;
+}
+
+.arrow {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size:xx-large;
+    color: white;
+    font-weight: 100;
+    position:absolute;
+    top: 41%;
+    right: 8.1%;
+    opacity: 0.7;
+}
+
+.imgTwo {
+    max-width: 130px;
+    position: absolute;
+    left: 50px;
+    top: 40px;
+}
+
+.two {
+    grid-area: two;
+    grid-column: 1 / 3;
+    padding: 8%;
+}
+
+.three {
+    grid-area: three;
+    grid-column: 3 / -1;
+    background-color: #edf4f0;
+    padding: 16%;
+}
+
+.three > h4 {
+    font-size: 20px;
+        font-family: 'Julius Sans One', sans-serif;
+}
+
+.three > p {
+    font-family: 'Libre Baskerville', sans-serif;
+}
+
+.four {
+    grid-area: four;
+    grid-column: 1 / 3;
+    background-color:  rgba(138,188,159,0.5);
+        padding: 8%;
+}
+
+.five {
+    grid-area: five;
+    grid-column: 3;
+    background-color: #a0b9ad;
+    padding: 16%;
+}
+
+.four, .five {
+    background-image: url("http://www.csszengarden.com/214/contours-opaque.png"), url("http://www.csszengarden.com/214/bamboo.png");
+}
+
+.six {
+    grid-area: six;
+    grid-column: 1 / 3;
+    padding: 8%;
+}
+
+.seven {
+    grid-area: seven;
+    grid-column: 3;
+    background-color: #edf4f0;
+}
+
+.eight {
+    grid-area: eight;
+    grid-column: 1 / -1;
+    background-image: url("http://www.csszengarden.com/214/noise.png"), url("http://www.csszengarden.com/214/gridlines-opaque.png"), url("http://www.csszengarden.com/214/contours-opaque.png"), url("http://www.csszengarden.com/214/koi.jpg");
+    padding: 10%;
+    color: white;
+}
+
+.eight > h1 {
+    font-family: 'Libre Baskerville', sans-serif;
+    font-size: 33px;
+    font-style: italic;
+    opacity: 0.4;
+    text-align: center;
+    line-height: 60px;
+}
+
+.nine {
+    grid-area: nine;
+    grid-column: 1 / -1;
+    background-color: #3e5d67
+}

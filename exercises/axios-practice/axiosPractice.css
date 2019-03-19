@@ -1,0 +1,31 @@
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "one two";
+    grid-gap: 10px;
+}
+
+/* body > div {
+    border: solid;
+} */
+
+#column1 {
+    grid-area: one;
+}
+
+#column2 {
+    grid-area: two;
+}
+
+form {
+    padding-left: 38%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background-color: #d4f2f4;
+}
+
+/* form > button {
+    align-content: center;
+} */
+

@@ -6,58 +6,42 @@
 //a conditional statement
 
 
-countCharacters = (str) => {
-    let newArray = [];
-    for(var i = 0; i < str.length; i++){
-        let counter = 0;
-        for(var x = 0; x < str.length; x++){
-            if(str[x] === str[i])
-                counter++;
-        }
-        newArray[str[i]] = counter;    //this works because object properties are unique (ie can't have multiple properties with same name)
-    }
-    return newArray;
+// countCharacters = (str) => {
+//     let newArray = [];
+//     for(var i = 0; i < str.length; i++){
+//         let counter = 0;
+//         for(var x = 0; x < str.length; x++){
+//             if(str[x] === str[i])
+//                 counter++;
+//         }
+//         newArray[str[i]] = counter;    //this works because object properties are unique (ie can't have multiple properties with same name)
+//     }
+//     return newArray;
+// }
+
+// console.log(countCharacters('slimy smelly solution'));
+
+
+// let matrix = [
+//     [1,2,3],
+//     [5,6,7],
+//     [9,8,4]
+// ]
+
+// for(var i = 0; i < 3; i++){
+//     for(var x = 0; x < 3; x++){
+//         matrix[i][x] = matrix[i][x] * 0;
+//     }
+// }
+// console.log(matrix)
+
+function Person (name, isAlive, hairColor){
+    this.name = name;
+    this.isAlive = isAlive;
+    this.hairColor = hairColor;
+    this.speak = () => {console.log(this.name)}
 }
 
-console.log(countCharacters('slimy smelly solution'));
+student1 = new Person ("Gina", true, "Dark Brown");
 
-
-//     let finalArray = []
-//     for(var i = 0; i < newArray.length; i++){
-//         for(var x = i + 1; x < newArray.length; x++){
-//             finalArray.push(newArray[i]);
-//             if(newArray[i] === newArray[x]){
-//                 finalArray.splice(x, 1);
-//             }
-//         }
-//     }
-//     return finalArray;
-// }
-// let temp;
-// for(var i = 0; i < newArray.length; i++){
-//     let originalLength = newArray.length;
-//     if(newArray[i] === newArray[i + 1]){
-//         newArray.splice(newArray[i + 1]);
-//         break;
-//     }
-//     if(originalLength !== newArray.length){
-        
-//     }
-// }
-
-// console.log(countCharacters("lllllll ggggg hello gggg yylg"))
-
-
-
-
-// let letters = {};
-
-// countLetters = (str) => {
-//     for(var i = 0; i < str.length; i++){
-//         let charCount = str.count(str[i]);
-//         letters[str[i]] = charCount;
-//     }
-// }
-
-
-// console.log(letters)
+student1.speak();
