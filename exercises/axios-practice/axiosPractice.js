@@ -49,32 +49,41 @@ deleteItem = () => {
 createToDo = (info) => {
     let div = document.createElement("div");
     div.className = "container";
+
     let title = document.createElement("h4");
     title.className = "title";
     title.textContent = info.title;          //no value?
+
     let description = document.createElement("p");
     description.className = "description";
     description.textContent = info.description;
+
     let price = document.createElement("p");
     price.className = "price";
     price.innerHTML = `Price: ${info.price}`;
+
     let img = document.createElement("img");
     img.className = "img";
     img.src = info.imgUrl;
     img.style.maxHeight = "200px";
+
     let completed = document.createElement("p");
     completed.className = "completed";
     completed.textContent = "Complete: "
     // completed.textContent = `Completed: ${info.completed}`;
+
     let line = document.createElement("hr");
+
     let checkBox = document.createElement("input");
     checkBox.name = "checkBox";
     checkBox.type = "checkbox";
     checkBox.id = info._id;
+
     let deleteButton = document.createElement("button");
     deleteButton.className = "delete";
     deleteButton.id = info._id;
     deleteButton.innerText = "Delete";
+    
     let lineBreak = document.createElement("br");
 
     div.appendChild(title);

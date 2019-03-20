@@ -13,10 +13,16 @@
     "nine nine nine";
 }
 
-/* .container > div {
-    border: solid;
-}
- */
+@font-face {
+	font-family: 'verdemoderna';
+	src:url('verdemoderna.eot');
+	src:url('verdemoderna.eot?#iefix') format('embedded-opentype'),
+		url('verdemoderna.woff') format('woff'),
+		url('verdemoderna.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+} 
+
 .one {
     grid-area: one;
     grid-column: 1 / -1;      /* this is important because i needed the image to go behind both div 1 and div 2 */
@@ -46,10 +52,19 @@
     opacity: 0.6;
 }
 
-.one > h2 span {
+.dotted {
     text-decoration: underline;
     text-decoration-style: dotted;
 }
+
+/* a:link {
+    color: #2387a7;
+}
+
+a:hover {
+    text-decoration: underline;
+} */
+
 
 .stripe1 {
     position: absolute;
@@ -93,8 +108,16 @@
     background-color: white;
     opacity: 0.1;
     right: 10.5%;
-    top: 40%;
+    bottom: 40%;
     min-width: 165px;
+}
+
+.viewDesigns:hover {
+    opacity: 0.2;
+}
+
+.arrowBox:hover {
+    opacity: 0.2;
 }
 
 .arrowBox {
@@ -104,7 +127,7 @@
     background-color: white;
     opacity: 0.1;
     right: 6.75%;
-    top: 40%;
+    bottom: 40%;
 }
 
 .view {
@@ -139,46 +162,160 @@
     grid-area: two;
     grid-column: 1 / 3;
     padding: 8%;
+    font-family: 'Libre Baskerville', sans-serif;
+    color: #3e5d67;
+    line-height: 30px;
+}
+
+.two h3 {
+    font-family: 'Julius Sans One', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.two img {
+    display: inline-block;
+    max-width: 20px;
 }
 
 .three {
     grid-area: three;
     grid-column: 3 / -1;
     background-color: #edf4f0;
-    padding: 16%;
+    padding: 13%;
+    
 }
 
-.three > h4 {
+.three ul {
+        list-style-type: none;
+}
+
+.sideHeader {
+    color: #3e5d67;
+}
+
+.sideHeader:hover {
+    color: #0c546094;
+    text-decoration: none;
+}
+
+.author {
+    color: #155724b5;
+}
+
+.author:hover {
+    color: #0c546094;
+    text-decoration: none;
+}
+
+.download {
+    display: inline-block;
+    font-family: 'Julius Sans One', sans-serif;
+    coloer:rgba(126, 171, 145, 0.5);
+}
+
+.download:hover {
+    background-color: #134347;
+    color: white;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+.sideHeader {
     font-size: 20px;
-        font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+    color: #3e5d67;
 }
 
-.three > p {
+.by, .author {
     font-family: 'Libre Baskerville', sans-serif;
+    color: #616857;
+}
+
+.by {
+    font-style: italic;
+    opacity: 0.5;
 }
 
 .four {
     grid-area: four;
     grid-column: 1 / 3;
     background-color:  rgba(138,188,159,0.5);
-        padding: 8%;
+    padding: 8%;
+    font-family: 'Libre Baskerville', sans-serif;
+    color: #3e5d67;
+    line-height: 30px;
+}
+
+.four h3 {
+    font-family: 'Julius Sans One', sans-serif;
+    color: #3e5d67;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.four a {
+    color: #1792a7;
+}
+
+.four a:hover {
+    color: #1baec7;
 }
 
 .five {
     grid-area: five;
     grid-column: 3;
-    background-color: #a0b9ad;
+    background-color: rgba(126, 171, 145, 0.5);
     padding: 16%;
 }
 
+.five h4 {
+    opacity: 0.8;
+    color: #3e5d67;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 20px;
+}
+
+.five a {
+    color: #3e5d67;
+}
+
+.five a:hover {
+    color: #0c7b8e;
+    text-decoration: none;
+}
+
 .four, .five {
-    background-image: url("http://www.csszengarden.com/214/contours-opaque.png"), url("http://www.csszengarden.com/214/bamboo.png");
+    background-image: url("http://www.csszengarden.com/214/gridlines-opaque.png"), url("http://www.csszengarden.com/214/contours-opaque.png"), url("http://www.csszengarden.com/214/bamboo.png");
 }
 
 .six {
     grid-area: six;
     grid-column: 1 / 3;
     padding: 8%;
+    font-family: 'Libre Baskerville', sans-serif;
+    color: #3e5d67;
+    line-height: 30px;
+}
+
+.six h4 {
+    font-family: 'Julius Sans One', sans-serif;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.six a {
+    color: #1594a9;
+}
+
+.six a:hover {
+    color: #19aec5;
 }
 
 .seven {
@@ -196,16 +333,213 @@
 }
 
 .eight > h1 {
+    display: inline-block;                           /*had to use this in order to add styling to span elements */
     font-family: 'Libre Baskerville', sans-serif;
     font-size: 33px;
-    font-style: italic;
-    opacity: 0.4;
     text-align: center;
     line-height: 60px;
 }
 
+.eight > h1 > span {
+    z-index: 1;
+    font-style: normal;
+    opacity: 0.4;
+    font-style: italic;
+}
+
+.eight a {
+    color: rgba(255, 255, 255, 0.719);
+}
+
 .nine {
+    position: relative;
     grid-area: nine;
     grid-column: 1 / -1;
-    background-color: #3e5d67
+    background-color: #134347;
+    font-family: 'verdemoderna';
+    padding-left: 24%;
+    padding-top: 5%;
+}
+
+.nine p {
+    position: absolute;
+    font-size: 70px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+}
+
+#hoverOne {
+    top: 28%;
+    left: 26.5%;
+}
+
+#hoverTwo {
+    top: 28%;
+    left: 38%;
+}
+
+#hoverThree {
+    top: 28%;
+    left: 49%;
+}
+
+#hoverFour {
+    top: 28%;
+    left: 60%;
+}
+
+#hoverFive {
+    top: 28%;
+    left: 71.5%;
+}
+
+@media (max-width: 1130px){
+
+.container {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto auto auto auto auto auto auto;   /* why doesn't it work when I do all fr?? */
+    grid-template-areas: 
+    "one one one"
+    "two two two"
+    "four four four"
+    "six six six"
+    "eight eight eight"
+    "nine nine nine"
+    "three three three"
+    "five five five";
+}
+
+.one > h1{
+    font-size: 38px;
+    top: 20%;
+    left: 40%;
+}
+
+.one h2 {
+    font-size: 20px;
+    top: 39%;
+    left: 45%;
+}
+
+.imgTwo {
+    max-width: 80px;
+    left: 30%;
+    top: 10%;
+}
+
+.box {
+    width: 100%;
+    padding: 35px;
+    background-color: white;
+    opacity: 0.2;
+}
+
+.viewDesigns {
+    width: 80%;
+    padding: 35px%;
+    right: 10%;
+    bottom: 0%;
+    opacity: 0.01;
+}
+
+.viewDesigns:hover {
+    opacity: 0.2;
+}
+
+.arrowBox {
+    width: 10%;
+    padding: 35px;
+    bottom: 0%;
+    right: 0%;
+
+}
+
+.view {
+    top: 80%;
+    right: 40%;
+}
+
+.arrow {
+    font-size: 70px;
+    top: 65%;
+    right: 3.2%;
+}
+
+.arrowBox:hover {
+    opacity: 0.2;
+}
+
+.two {
+    grid-column: 1 / -1;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.two h3 {
+    font-size: 20px;
+}
+
+.four {
+    grid-column: 1 / -1;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.four h3 {
+    font-size: 20px;
+}
+
+.six {
+    grid-column: 1 / -1;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.six h4 {
+    font-size: 20px;
+}
+
+.eight {
+    padding: 4%;
+}
+
+.eight h1 {
+    font-size: 23px;
+}
+
+.nine {
+    padding: 7%;
+}
+
+.nine p {
+    font-size: 45px;
+}
+
+.three {
+    grid-column: 1 / -1;
+    padding: 0;
+    position: relative;
+}
+
+.three div {
+    position: absolute;
+/*     column-count: 2;
+    column-rule: solid;
+    column-gap: 200px; */
+}
+
+.three div {
+    left: 5%;
+}
+
+.three section {
+    left: 40%;
+}
+
+.odd {
+    visibility: hidden;
+}
 }
