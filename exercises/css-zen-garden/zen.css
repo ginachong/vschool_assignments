@@ -275,11 +275,12 @@ a:hover {
     padding: 16%;
 }
 
-.five h4 {
+.five li {
     opacity: 0.8;
     color: #3e5d67;
     font-family: 'Julius Sans One', sans-serif;
     font-size: 20px;
+    list-style-type: none;
 }
 
 .five a {
@@ -400,7 +401,7 @@ a:hover {
     min-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr auto auto auto auto auto auto auto;   /* why doesn't it work when I do all fr?? */
+    grid-template-rows: 1fr auto auto auto auto auto auto 1fr;   /* why doesn't it work when I do all fr?? */
     grid-template-areas: 
     "one one one"
     "two two two"
@@ -439,7 +440,7 @@ a:hover {
 
 .viewDesigns {
     width: 80%;
-    padding: 35px%;
+    padding: 35px;
     right: 10%;
     bottom: 0%;
     opacity: 0.01;
@@ -520,26 +521,51 @@ a:hover {
 
 .three {
     grid-column: 1 / -1;
-    padding: 0;
-    position: relative;
+    padding: 15px;
+    column-count: 2;
 }
 
-.three div {
-    position: absolute;
-/*     column-count: 2;
-    column-rule: solid;
-    column-gap: 200px; */
+.three li {
+    border-bottom: solid;
+    border-width: thin;
+    border-color: #0000001f;
 }
 
-.three div {
-    left: 5%;
-}
-
-.three section {
-    left: 40%;
-}
-
-.odd {
+.three hr {
     visibility: hidden;
 }
+
+.sideHeader {
+    font-size: 18px;
+}
+
+.by {
+    font-size: 15px;
+}
+
+.author {
+    font-size: 15px;
+}
+
+.five {
+    grid-area: five;
+    grid-column: 1 / -1;
+    padding: 10px;
+    column-count: 2;
+}
+
+.five li {
+    border-bottom: solid;
+    border-width: thin;
+    border-color: #0000001f;
+}
+
+/* #oddOne {
+    padding-top: 200px;
+} */
+
+.five hr {
+    visibility: hidden;
+}
+
 }
