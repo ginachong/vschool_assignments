@@ -1,0 +1,194 @@
+/* #root {
+  background-color: pink;
+} */
+
+/* nav {
+  position: relative;
+} */
+
+nav {
+  display: inline-block;
+  position: relative;
+  color: #afafaf;
+  font-family: 'Amiri', serif;
+  font-size: 21px;
+  left: 100px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 64%;
+  list-style: none;
+  z-index: 1;
+  color: #afafaf;
+  line-height: 20px;
+}
+
+nav:hover .dropdown {
+  display: block;
+}
+
+img {
+  max-height: 600px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto auto auto auto auto auto;
+  grid-template-areas: 'one one''two two''three three''four four''five five''six six' 'footer footer';
+  min-width: 100%;
+}
+
+.container div {
+  border-bottom: solid;
+  border-width: thin;
+  border-color: #dbdde0;
+}
+
+.banner {
+  border-bottom: none;
+  grid-area: one;
+  /* background-image: url('https://i0.wp.com/3.bp.blogspot.com/-h5B76BfMTsA/V4nMsNvZSMI/AAAAAAAAGoI/LMVxLOlrmXUXf1N1NGDa79mzXCrKriMbwCEw/s1920/DSC_7349.jpg?zoom=2&resize=653%2C978&ssl=1'); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* position: relative; */
+  color: white;
+  line-height: 40%;
+  padding: 200px;
+  text-align: center;
+}
+
+.bannerHeader {
+  /* position: absolute;
+  top: 15%;
+  left: 4%; */
+  font-family: 'Italiana', serif;
+  font-size: 50px;
+  opacity: 0.1;
+  color: black;
+}
+
+.bannerSubHeader {
+  /* position: absolute;
+  top: 28%;
+  left: 12%; */
+  font-family: 'Alex Brush', cursive;
+  font-size: 30px;
+  opacity: 0.2;
+  color: black;
+}
+
+.two {
+  grid-area: two;
+  padding: 100px;
+  /* background-color: #000000; */
+}
+
+.three {
+  grid-area: three;
+  padding: 100px;
+  /* background-color: pink; */
+}
+
+.three img {
+  float: right;
+}
+
+.four {
+grid-area: four;
+padding: 100px;
+/* background-color: orange; */
+}
+
+.five {
+grid-area: five;
+padding: 100px;
+/* background-color: green; */
+}
+
+.five img {
+  float: right;
+}
+
+.six {
+grid-area: six;
+padding: 100px;
+/* background-color: yellow; */
+}
+
+.footer {
+  grid-area: footer;
+  padding: 100px;
+  position: relative;
+}
+
+.footer img {
+  position: absolute;
+  max-height: 28px;
+}
+
+.instagram {
+  left: 44%;
+}
+
+.instagram:hover {
+  opacity: 0.5;
+}
+
+.facebook {
+  left: 49%;
+}
+
+.facebook:hover {
+  opacity: 0.5;
+}
+
+.twitter {
+  left: 54%;
+}
+
+.twitter:hover {
+  opacity: 0.5;
+}
+
+
+
+
+
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
