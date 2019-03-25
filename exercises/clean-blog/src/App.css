@@ -1,0 +1,50 @@
+
+
+.navLeft {
+  float: left;
+  padding: 10px;
+  padding-left: 10%;;
+}
+
+.navRight {
+  padding-right: 10%;;
+}
+
+.navRight h4{
+  float: right;
+  padding: 10px;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  color: white;
+}
+
+.headerContainer {
+  height: 550px;
+}
+
+.headerContainer img {
+  width: 100%;
+  opacity: 0.8;
+}
+
+.headerContainer {
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
