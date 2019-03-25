@@ -414,21 +414,21 @@ a:hover {
 }
 
 .one > h1{
-    font-size: 38px;
+    font-size: 30px;
     top: 20%;
     left: 40%;
 }
 
 .one h2 {
-    font-size: 20px;
+    font-size: 16px;
     top: 39%;
     left: 45%;
 }
 
 .imgTwo {
-    max-width: 80px;
+    max-width: 55px;
     left: 30%;
-    top: 10%;
+    top: 15%;
 }
 
 .box {
@@ -536,15 +536,15 @@ a:hover {
 }
 
 .sideHeader {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .by {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .author {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .five {
@@ -566,6 +566,67 @@ a:hover {
 
 .five hr {
     visibility: hidden;
+}
+
+.fiveList{
+    font-size: 10px;
+}
+
+.five ul li{
+    font-size: 15px;
+}
+
+}
+
+@media (max-width: 600px){
+
+.imgTwo {
+/*     left: 47%; */
+    max-width: 50px;
+    top: 20%;
+    left: 27%;
+}
+
+.one h1 {
+    font-size: 25px;
+/*     left: 27%;
+    top: 35%; */
+}
+
+.one h2 {
+    font-size: 15px;
+/*     top: 50%;
+    left: 33%; */
+}
+
+}
+
+@media (max-width: 500px){
+
+.imgTwo {
+    left: 47%;
+    max-width: 50px;
+    top: 10%;
+}
+
+.one h1 {
+    font-size: 25px;
+    left: 27%;
+    top: 35%;
+}
+
+.one h2 {
+    font-size: 15px;
+    top: 50%;
+    left: 33%;
+}
+
+/* .five {
+    height: 200px;
+} */
+
+.nine {
+    height: 140px;
 }
 
 }
