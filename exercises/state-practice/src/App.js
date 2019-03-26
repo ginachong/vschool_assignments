@@ -12,7 +12,7 @@ class App extends React.Component {
 handleClickAdd = () => {
   this.setState(prevState => {
     return(
-      {counter: prevState.counter + 1}
+      {counter: prevState.counter + 10}
     )
   })
 }
@@ -20,10 +20,15 @@ handleClickAdd = () => {
 handleClickSubtract = () => {
     this.setState(prevState => {
       return(
-      {counter: prevState.counter -1}
+      {counter: prevState.counter -10}
     )}
   )
 }
+
+handleReset = () => {
+  this.setState(
+    {counter: 0}
+  )}
 
 render(){
   return(
@@ -31,6 +36,8 @@ render(){
         <button onClick={this.handleClickSubtract}>Count Down</button>
         {this.state.counter}
         <button onClick={this.handleClickAdd}>Count Up</button>
+        <br/>
+        <button onClick={this.handleReset}>Reset</button>
     </div>
   )
 }
