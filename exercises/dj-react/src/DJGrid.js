@@ -11,14 +11,21 @@ class DJGrid extends React.Component{
     constructor(){
         super()
         this.state={
-            color: ["white", "white", "white", "white"],
+            color: ["white", "black", "black", "white"],
         }
     }
 
     handleClick = () => {
-        this.setState(
-            {color: ["black", "black", "black", "black"]}
-        )
+        this.setState(prevState => {
+            let colorArray = prevState.color.map((item) => {
+                if(item === "black")
+                    item = "white"
+                else if (item === "white")
+                    item = "black"
+                return item;
+            })
+            return {color: colorArray}
+        })
     }
 
     handleClickPurple = () => {
