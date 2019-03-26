@@ -23,19 +23,23 @@
 }
 
 .headerContainer {
-  height: 550px;
-}
-
-.headerContainer img {
-  width: 100%;
-  opacity: 0.8;
-}
-
-.headerContainer {
+  height: 500px;
   position: relative;
+  background-image: url("https://i.pinimg.com/originals/06/2b/7f/062b7fb9cfd2a6351f4e0850c1e1ed50.jpg");
+  background-size: 100%;
 }
 
-.header {
+.headerOverlay {
+  background-color: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.headerText {
   position: absolute;
   top: 30%;
   left: 0;
