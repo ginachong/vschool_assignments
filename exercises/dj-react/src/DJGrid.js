@@ -53,6 +53,12 @@ class DJGrid extends React.Component{
         })
     }
 
+    // handleReset = (index) => {
+    //     this.setState(prevState => {
+
+    //     })
+    // }
+
     render(){
         return(
 

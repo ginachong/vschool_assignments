@@ -8,10 +8,18 @@ function Square(props){
         width: "300px",
         border: "solid",
         backgroundColor: props.color,
+        position: "relative",
+    }
+
+    let buttonStyle = {
+        position: "absolute",
     }
 
         return(
-            <div style={boxStyle}></div>
+            <div style={boxStyle}>
+                <div></div>
+                <button style={buttonStyle}>Reset</button>
+            </div>
         )
 }
 

@@ -1,10 +1,15 @@
 import React from "react"
 
-function BlogPost(){
+function BlogPost(props){
     return(
-        <div></div>
+        <div>
+            <h1>{props.title}</h1>
+            <h4>{props.subtitle}</h4>
+            <p>Posted by {props.author}</p>
+            <p>on {props.date}</p>
+        </div>
     )
 }
 
 
-export default BLogPost
+export default BlogPost
