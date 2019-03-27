@@ -18,7 +18,7 @@ function Square(props){
         return(
             <div style={boxStyle}>
                 <div></div>
-                <button onClick={() => {props.handler(props.id)}} style={buttonStyle}>Reset</button>
+                <button onClick={() => {props.handler(props.id); props.soundEffect()}} style={buttonStyle}>Reset</button>
             </div>
         )
 }

@@ -12,6 +12,7 @@ class DJGrid extends React.Component{
         super()
         this.state={
             color: ["white", "black", "black", "white"],
+            url: "src/cartoon-birds-2_daniel-simion.wav",
         }
     }
 
@@ -28,7 +29,14 @@ class DJGrid extends React.Component{
         })
     }
 
+    play = () => {
+        this.setState((prevState) => {
+            prevState.url.play()
+        })
+    }
+
     handleClickPurple = () => {
+        this.play();
         this.setState(prevState => {
             return{
                 color: ["purple", "purple", prevState.color[2], prevState.color[3]]
@@ -38,6 +46,7 @@ class DJGrid extends React.Component{
     
 
     handleBlueLeft = () => {
+        this.play();
         this.setState(prevState => {
             return{
                 color: [prevState.color[0], prevState.color[1], "blue", prevState.color[3]]
@@ -46,6 +55,7 @@ class DJGrid extends React.Component{
     }
 
     handleBlueRight = () => {
+        this.play();
         this.setState(prevState => {
             return{
                 color: [prevState.color[0], prevState.color[1], prevState.color[2], "blue"]
@@ -54,6 +64,7 @@ class DJGrid extends React.Component{
     }
 
     handleReset = (index) => {
+        this.play();
         this.setState(prevState => {
                 if(prevState.color[index] !== "white")
                     prevState.color[index] = "white"
@@ -61,14 +72,16 @@ class DJGrid extends React.Component{
         })
     }
 
+
     render(){
         return(
 
                 <div style={containerStyle}>
-                    <Square handler={this.handleReset} id="0" color={this.state.color[0]} />
-                    <Square handler={this.handleReset} id="1" color={this.state.color[1]} />
-                    <Square handler={this.handleReset} id="2" color={this.state.color[2]} />
-                    <Square handler={this.handleReset} id="3" color={this.state.color[3]} />
+                    {/* <audio id="audio" src={this.state.url}></audio> */}
+                    <Square soundEffect={this.play} handler={this.handleReset} id="0" color={this.state.color[0]} />
+                    <Square soundEffect={this.play} handler={this.handleReset} id="1" color={this.state.color[1]} />
+                    <Square soundEffect={this.play} handler={this.handleReset} id="2" color={this.state.color[2]} />
+                    <Square soundEffect={this.play} handler={this.handleReset} id="3" color={this.state.color[3]} />
                     <button onClick={this.handleClick}>Swap Colors</button>
                     <button onClick={this.handleClickPurple}>Purple</button>
                     <button onClick={this.handleBlueLeft}>Blue</button>
