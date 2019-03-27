@@ -53,20 +53,22 @@ class DJGrid extends React.Component{
         })
     }
 
-    // handleReset = (index) => {
-    //     this.setState(prevState => {
-
-    //     })
-    // }
+    handleReset = (index) => {
+        this.setState(prevState => {
+                if(prevState.color[index] !== "white")
+                    prevState.color[index] = "white"
+                return prevState.color[index]
+        })
+    }
 
     render(){
         return(
 
                 <div style={containerStyle}>
-                    <Square color={this.state.color[0]} />
-                    <Square color={this.state.color[1]} />
-                    <Square color={this.state.color[2]} />
-                    <Square color={this.state.color[3]} />
+                    <Square handler={this.handleReset} id="0" color={this.state.color[0]} />
+                    <Square handler={this.handleReset} id="1" color={this.state.color[1]} />
+                    <Square handler={this.handleReset} id="2" color={this.state.color[2]} />
+                    <Square handler={this.handleReset} id="3" color={this.state.color[3]} />
                     <button onClick={this.handleClick}>Swap Colors</button>
                     <button onClick={this.handleClickPurple}>Purple</button>
                     <button onClick={this.handleBlueLeft}>Blue</button>

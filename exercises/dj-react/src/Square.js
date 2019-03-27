@@ -18,7 +18,7 @@ function Square(props){
         return(
             <div style={boxStyle}>
                 <div></div>
-                <button style={buttonStyle}>Reset</button>
+                <button onClick={() => {props.handler(props.id)}} style={buttonStyle}>Reset</button>
             </div>
         )
 }
