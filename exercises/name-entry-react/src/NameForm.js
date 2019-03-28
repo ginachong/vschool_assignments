@@ -16,10 +16,10 @@ class NameForm extends React.Component{
         })
     }
 
-    handleEntries = (newEntry) => {
+    handleEntries = (e, newEntry) => {
+        e.preventDefault()
         this.setState(prevState => {
-            prevState.entryArray.push(newEntry)
-            return prevState.entryArray
+            return {entryArray: [newEntry, ...prevState.entryArray]}
         })
     }
 
@@ -37,7 +37,7 @@ class NameForm extends React.Component{
                     <input onChange={this.handleChange} value={this.state.name} name="name"></input>
                 </label>
                     <h1>{this.state.name}</h1>
-                    <button id={this.state.name} onClick={this.handleEntries}>Submit</button>
+                    <button id={this.state.name} onClick={(e)=>{this.handleEntries(e, this.state.name)}}>Submit</button>
                     <ol>{newEntryArray}</ol>
             </form>
         )
