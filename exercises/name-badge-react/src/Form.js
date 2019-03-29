@@ -62,12 +62,12 @@ class Form extends React.Component{
             <div className="container">
                 <form>
                     <div className="inputBoxes">
-                        <input size="45" type="text" placeholder="First Name" name="fName" value={this.state.fName} onChange={this.handleChange}></input>
-                        <input size="45" type="text" placeholder="Email" name="email" value={this.state.email} onChange={this.handleChange}></input>
-                        <input size="45" type="text" placeholder="Phone" name="phone" value={this.state.phone} onChange={this.handleChange}></input>
-                        <input size="45" type="text" placeholder="Last Name" name="lName" value={this.state.lName} onChange={this.handleChange}></input>
-                        <input size="45" type="text" placeholder="Place of Birth" name="birthPlace" value={this.state.birthPlace} onChange={this.handleChange}></input>
-                        <input size="45" type="text" placeholder="Favorite Food" name="favFood" value={this.state.favFood} onChange={this.handleChange}></input>
+                        <input minlength="3" size="45" type="text" placeholder="First Name" name="fName" value={this.state.fName} onChange={this.handleChange}></input>
+                        <input minlength="3" size="45" type="text" placeholder="Email" name="email" value={this.state.email} onChange={this.handleChange}></input>
+                        <input minlength="3" size="45" type="text" placeholder="Phone" name="phone" value={this.state.phone} onChange={this.handleChange}></input>
+                        <input minlength="3" size="45" type="text" placeholder="Last Name" name="lName" value={this.state.lName} onChange={this.handleChange}></input>
+                        <input minlength="3" size="45" type="text" placeholder="Place of Birth" name="birthPlace" value={this.state.birthPlace} onChange={this.handleChange}></input>
+                        <input minlength="3" size="45" type="text" placeholder="Favorite Food" name="favFood" value={this.state.favFood} onChange={this.handleChange}></input>
                     </div>
                     <div className="textAndButton">
                         <textarea rows="10" cols="95" className="textBox" placeholder="Tell us about yourself" name="description" value={this.state.description} onChange={(e) => {this.handleChange(e)}}></textarea>
