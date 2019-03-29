@@ -21,7 +21,7 @@ class Form extends React.Component{
 
     handleChange = (e) => {
         this.setState({
-            [e.target.name]: [e.target.value]  //----> understand the bracket syntax
+            [e.target.name]: e.target.value  //----> understand the bracket syntax
         })
     }
 
@@ -32,15 +32,18 @@ class Form extends React.Component{
         e.preventDefault()
         const values = Object.values(newData)
         for(let i = 0; i < values.length; i++){
-            if(values[i] < 3){
+            if(values[i].length < 3){
                 return alert("All input must be 3 or more characters")
-            } else{
-                this.setState(prevState => {
-                    return {badgeArray: [newData, ...prevState.badgeArray]}
-            })
+            } 
         }
-        }
+        return this.setState(prevState => {
+            return {badgeArray: [newData, ...prevState.badgeArray]}  //----> by putting this return OUTSIDE of the if statement and for loop,
+        })                                                             //    the for loop will run over every item in values to make sure each value
+                                                                        //   is > 3 characters. If any of them ARE under 3, the return breaks you out of
+                                                                        //   the function. BUT if all of them are over 3, then you will complete the for
+                                                                        //   loop and reach the final return, which updates state.
     }
+
   
     render(){
         let data = {
@@ -62,12 +65,12 @@ class Form extends React.Component{
             <div className="container">
                 <form>
                     <div className="inputBoxes">
-                        <input minlength="3" size="45" type="text" placeholder="First Name" name="fName" value={this.state.fName} onChange={this.handleChange}></input>
-                        <input minlength="3" size="45" type="text" placeholder="Email" name="email" value={this.state.email} onChange={this.handleChange}></input>
-                        <input minlength="3" size="45" type="text" placeholder="Phone" name="phone" value={this.state.phone} onChange={this.handleChange}></input>
-                        <input minlength="3" size="45" type="text" placeholder="Last Name" name="lName" value={this.state.lName} onChange={this.handleChange}></input>
-                        <input minlength="3" size="45" type="text" placeholder="Place of Birth" name="birthPlace" value={this.state.birthPlace} onChange={this.handleChange}></input>
-                        <input minlength="3" size="45" type="text" placeholder="Favorite Food" name="favFood" value={this.state.favFood} onChange={this.handleChange}></input>
+                        <input minLength="3" size="45" type="text" placeholder="First Name" name="fName" value={this.state.fName} onChange={this.handleChange}></input>
+                        <input minLength="3" size="45" type="text" placeholder="Email" name="email" value={this.state.email} onChange={this.handleChange}></input>
+                        <input minLength="3" size="45" type="text" placeholder="Phone" name="phone" value={this.state.phone} onChange={this.handleChange}></input>
+                        <input minLength="3" size="45" type="text" placeholder="Last Name" name="lName" value={this.state.lName} onChange={this.handleChange}></input>
+                        <input minLength="3" size="45" type="text" placeholder="Place of Birth" name="birthPlace" value={this.state.birthPlace} onChange={this.handleChange}></input>
+                        <input minLength="3" size="45" type="text" placeholder="Favorite Food" name="favFood" value={this.state.favFood} onChange={this.handleChange}></input>
                     </div>
                     <div className="textAndButton">
                         <textarea rows="10" cols="95" className="textBox" placeholder="Tell us about yourself" name="description" value={this.state.description} onChange={(e) => {this.handleChange(e)}}></textarea>
@@ -80,6 +83,6 @@ class Form extends React.Component{
             </div>
         )
         }
-  }
+    }
 
   export default Form
