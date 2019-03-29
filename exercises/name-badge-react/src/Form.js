@@ -30,9 +30,16 @@ class Form extends React.Component{
 
     handleClick = (e, newData) => {
         e.preventDefault()
-        this.setState(prevState => {
-            return {badgeArray: [newData, ...prevState.badgeArray]}
-        })
+        const values = Object.values(newData)
+        for(let i = 0; i < values.length; i++){
+            if(values[i] < 3){
+                return alert("All input must be 3 or more characters")
+            } else{
+                this.setState(prevState => {
+                    return {badgeArray: [newData, ...prevState.badgeArray]}
+            })
+        }
+        }
     }
   
     render(){
