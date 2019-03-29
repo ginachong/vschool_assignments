@@ -1,0 +1,86 @@
+form {
+  border: solid;
+  border-radius: 25px;
+  border-width: thin;
+  width: 700px;
+  left:0;
+  right: 0;
+  margin: auto;
+}
+
+
+.inputBoxes {
+  columns: 2;
+  height: 100px;
+  width: 600px;
+  padding: 20px;
+  left:0;
+  right: 0;
+  margin: auto;
+}
+
+.inputBoxes input {
+  margin-bottom: 20px;
+  display: block;
+  /* padding-right: 150px; */
+}
+
+.textAndButton {
+  width: 600px;
+  padding: 20px;
+  left:0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.badgeContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.badge {
+  width: 90%;
+  left:0;
+  right: 0;
+  margin: auto;
+  border: solid;
+  border-width: thin;
+}
+
+.badgeHeader {
+  height: 20px;
+  background-color: gray;
+}
+
+.badgeHeader h4 {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.badgeInfo {
+  columns: 2;
+  height: 100px;
+  width: 600px;
+  padding-top: 20px;
+  left:0;
+  right: 0;
+  margin: auto;
+}
+
+.descriptionBox {
+  width: 600px;
+  padding: 20px;
+  left:0;
+  right: 0;
+  margin: auto;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+
