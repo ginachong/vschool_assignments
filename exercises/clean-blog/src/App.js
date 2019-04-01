@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from "./Header"
 import blogData from "./blogData"
-import BlogList from "./BlogList"
+import BlogPost from "./BlogPost"
 import BlogFormat from "./BlogFormat"
 import Footer from "./Footer"
 

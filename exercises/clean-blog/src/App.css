@@ -57,3 +57,17 @@
   display: inline;
 }
 
+.blogList {
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 5%;
+}
+
+.arrow {
+  max-height: 30px;
+  display: inline-block;
+}
+
+.olderPosts p {
+  display: inline-block;
+}
