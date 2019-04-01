@@ -33,7 +33,6 @@ class Form extends React.Component{
             }
         } 
         this.setState({disabled: false})
-        this.checkNumber()
     }
 
 
@@ -41,6 +40,7 @@ class Form extends React.Component{
 
     handleClick = (e, newData) => {
         e.preventDefault()
+        this.checkNumber() //----> return out so the function ends ---> add more checks for all boxes
         const values = Object.values(newData)
         for(let i = 0; i < values.length; i++){
             if(values[i].length < 3){
@@ -58,8 +58,8 @@ class Form extends React.Component{
 
     checkNumber = () => {
         if(isNaN(this.state.phone)){
-            alert("Please enter your phone number with numbers only (eg: 5558885678")
-            this.setState({disabled: true})
+            alert("Please enter your phone number with numbers only (eg: 5558885678)")
+            return this.setState({disabled: true})
         }
     }
 
