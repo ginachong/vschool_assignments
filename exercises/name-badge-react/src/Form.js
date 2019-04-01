@@ -14,8 +14,10 @@ class Form extends React.Component{
         favFood: "",
         description: "",
         badgeArray: [],
-        disabled: true
+        disabled: true,
+        color: "purple"
       }
+    //   this.checkNumber = this.checkNumber.bind(this)
     }
   
     //method for updating state info (name, birth, email, phone, food) onChange
@@ -27,10 +29,11 @@ class Form extends React.Component{
         const values = Object.values(newData)
         for(let i = 0; i < values.length; i++){
             if(values[i].length < 3){
-                return this.setState({disabled: true})
+                this.setState({disabled: true})
             }
         } 
-        return this.setState({disabled: false})
+        this.setState({disabled: false})
+        this.checkNumber()
     }
 
 
@@ -44,12 +47,31 @@ class Form extends React.Component{
                 return alert("All input must be 3 or more characters")
             }
         }
-        return this.setState(prevState => {
+        this.badgeColor()
+        this.setState(prevState => {
             return {badgeArray: [newData, ...prevState.badgeArray],  //----> by putting this return OUTSIDE of the if statement and for loop,
                     }                                                     //    the for loop will run over every item in values to make sure each value
     })                                                                  //   is > 3 characters. If any of them ARE under 3, the return breaks you out of
                                                                         //   the function. BUT if all of them are over 3, then you will complete the for
                                                                         //   loop and reach the final return, which updates state.
+    }
+
+    checkNumber = () => {
+        if(isNaN(this.state.phone)){
+            alert("Please enter your phone number with numbers only (eg: 5558885678")
+            this.setState({disabled: true})
+        }
+    }
+
+    badgeColor = () => {
+        if(this.state.color === "purple")
+            this.setState({color: "pink"})
+        else if(this.state.color === "pink")
+            this.setState({color: "yellow"})
+        else if(this.state.color === "yellow")
+            this.setState({color: "lightblue"})
+        else
+            this.setState({color: "purple"})
     }
 
   
@@ -61,7 +83,9 @@ class Form extends React.Component{
             email: this.state.email, 
             phone: this.state.phone, 
             favFood: this.state.favFood, 
-            description: this.state.description}
+            description: this.state.description,
+            color: this.state.color,
+        }
 
         //new array = map of badges creating a new badge for each array item
 

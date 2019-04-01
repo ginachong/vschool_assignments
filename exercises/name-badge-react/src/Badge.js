@@ -1,9 +1,14 @@
 import React from "react"
 
 function Badge(props){
+
+    let color = {
+        backgroundColor: props.item.color
+    }
+
     return (
         <div className="badge">
-            <div className="badgeHeader">
+            <div style={color} className="badgeHeader">
                 <h4>Badge:</h4>
             </div>
             <div className="badgeInfo">
