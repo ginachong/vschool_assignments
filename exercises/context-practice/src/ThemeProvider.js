@@ -1,4 +1,5 @@
 import React from "react"
+import {Provider, Consumer} from "./index"
 
 class ThemeProvider extends React.Component{
     constructor(){
@@ -13,12 +14,11 @@ class ThemeProvider extends React.Component{
     } //-------> why does there need to be parentheses around this????
 
     render(){
-
+        
         const props = {
             handleClick: this.handleClick,
             ...this.state
         }
-
         return(
             <Provider value={props}>
                 {this.props.children} 
@@ -31,3 +31,9 @@ class ThemeProvider extends React.Component{
 //what is this.props.children???
 
 export default ThemeProvider
+
+export const withTheme = C => props => (
+    <Consumer>
+        {value => <C {...value}{...props}/>}
+    </Consumer>
+)
