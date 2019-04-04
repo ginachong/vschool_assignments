@@ -1,0 +1,27 @@
+
+.summer {
+  color: rgb(231, 106, 204);
+  background-color: lightblue;
+  text-align: center;
+}
+
+.winter {
+  color: lightblue;
+  background-color: black;
+  text-align: center;
+}
+
+.spring {
+  color: lightyellow;
+  background-color: lightgreen;
+  text-align: center;
+}
+
+.fall {
+  color: black;
+  background-color: orangered;
+  text-align: center;
+}
+
+
+
