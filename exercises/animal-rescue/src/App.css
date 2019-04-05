@@ -1,1 +1,43 @@
 
+.sideBar {
+  border: solid;
+  float: left;
+  height: 100vh;
+  width: 30vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "header header header"
+  "bench progress progress";
+}
+
+.sideHeader {
+  grid-area: header;
+}
+
+.benchmarks {
+  grid-area: bench;
+}
+
+.progressBar {
+  grid-area: progress;
+}
+
+.progressBar div {
+  border: solid;
+  padding: 20px;
+}
+
+.menuBar {
+  border: solid;
+  display: inline-block;
+  padding: 10px;
+
+}
+
+.menuBar div {
+  display: inline-block;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+

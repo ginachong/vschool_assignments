@@ -4,9 +4,12 @@ import {withData} from "./DataProvider"
 function SideBar() {
   return (
     <div className="sideBar">
-        <h3>Ultimate Cat Lady Status</h3>
+        <h3 className="sideHeader">Ultimate Cat Lady Status</h3>
         <div className="benchmarks">
-            <p></p>
+            <p>cat ninja</p>
+            <p>cat advocate</p>
+            <p>cat lover</p>
+            <p>no soul</p>
         </div>
         <div className="progressBar">
             <div></div>
