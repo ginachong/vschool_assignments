@@ -16,3 +16,8 @@ ReactDOM.render(
 document.getElementById('root'));
 
 
+// TO DO:
+
+// -celebration when nirvana is reached
+// -a way to reset the progress bar
+// - why do the menu links not work when the fixed bar is scrolled down??

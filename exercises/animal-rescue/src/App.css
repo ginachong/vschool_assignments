@@ -1,22 +1,43 @@
 
+/* .container {
+} */
+
 .sideBar {
   border: solid;
+  border-width: thin;
+  padding: 15px;
   float: left;
-  height: 100vh;
-  width: 30vh;
+  height: 100%;
+  width: 30%;
   display: grid;
+  position: relative;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
+  "img img img"
   "header header header"
   "bench progress progress";
+
+}
+
+.catLadyImg {
+  grid-area: img;
+  max-height: 200px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .sideHeader {
   grid-area: header;
+  text-align: center;
 }
 
 .benchmarks {
   grid-area: bench;
+}
+
+.benchmarks p {
+  padding-bottom: 12px;
 }
 
 .progressBar {
@@ -25,19 +46,73 @@
 
 .progressBar div {
   border: solid;
-  padding: 20px;
+  padding: 15px;
+  margin: 10px;
 }
 
 .menuBar {
-  border: solid;
-  display: inline-block;
-  padding: 10px;
-
+  width: 100%;
+  position: fixed;
+  left: 37%;
 }
 
 .menuBar div {
   display: inline-block;
-  padding-right: 60px;
-  padding-left: 60px;
+  padding-right: 10%;
+  padding-left: 10px;
+  font-size: 20px;
+  /* text-decoration: none; */
 }
 
+.homePage {
+  position: absolute;
+  left: 34%;
+  top: 5%;
+}
+
+.homeText {
+  padding: 60px;
+}
+
+.homeText h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.felineFactsPage {
+  width: 65%;
+  height: 100%;
+  position: absolute;
+  left: 34%;
+  top: 5%;
+}
+
+.felineFactsText {
+  padding: 60px;
+  text-align: center;
+}
+
+.felineFactsText h1 {
+  font-size: 40px;
+}
+
+
+
+/* responsive: 
+
+-change sidebar to fixed width, then move it when the window is too small
+-add background color to menu when you scroll down
+-and change menu to fixed when scroll down
+-change size of homepage header
+
+*/
+
+
+
+/* NOTES: 
+
+-to remove underline from Link Component: use inline style 
+
+
+
+*/

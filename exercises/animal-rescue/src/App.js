@@ -8,7 +8,7 @@ import {Switch, Route} from "react-router-dom"
 
 function App(props){
   return(
-      <div>
+      <div className="container">
         <SideBar {...props}/>
         <Menu />
         <Switch>
