@@ -1,16 +1,18 @@
 
 /* .container {
+  background-color: #F7D4BC;
 } */
 
 .sideBar {
   border: solid;
   border-width: thin;
+  border-color: #896978;
   padding: 15px;
   float: left;
   height: 100%;
-  width: 30%;
+  width: 300px;
   display: grid;
-  position: relative;
+  /* position: relative; */
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
   "img img img"
@@ -28,12 +30,15 @@
 }
 
 .sideHeader {
+  font-family: 'Arapey', serif;
+  font-size: 30px;
   grid-area: header;
   text-align: center;
 }
 
 .benchmarks {
   grid-area: bench;
+  font-family: 'Arapey', serif;
 }
 
 .benchmarks p {
@@ -46,14 +51,21 @@
 
 .progressBar div {
   border: solid;
+  border-width: thin;
   padding: 15px;
-  margin: 10px;
+  margin: 14px;
 }
 
 .menuBar {
-  width: 100%;
+  z-index: 1;
+  /* background-color: #FAE3E3; */
+  display: flex;
+  flex-direction: row;
   position: fixed;
-  left: 37%;
+  left: 340px;
+  padding: 5px;
+  width: 100vw;
+  height: 25px;
 }
 
 .menuBar div {
@@ -66,34 +78,71 @@
 
 .homePage {
   position: absolute;
-  left: 34%;
-  top: 5%;
-}
-
-.homeText {
-  padding: 60px;
+  left: 350px;
+  top: 45px;
+  width: 75%;
 }
 
 .homeText h1 {
-  font-size: 40px;
-  text-align: center;
+  font-family: 'Bad Script', cursive;
+  font-size: 70px;
+  padding: 20px;
+}
+
+.homePage img {
+  max-width: 250px;
+  float: left;
+}
+
+.homeText h4 {
+  background-color: #F7D4BC;
+  padding: 50px;
+  font-family: 'Arapey', serif;
+  font-size: 25px;
+}
+
+.p1 {
+  background-color: #C7EAE4;
+  padding: 50px;
+  font-family: 'Arapey', serif;
+  font-size: 20px;
+}
+
+.p2 {
+  background-color: #CF8BA9;
+  padding: 50px;
+  font-family: 'Arapey', serif;
+  font-size: 20px;
 }
 
 .felineFactsPage {
-  width: 65%;
-  height: 100%;
   position: absolute;
-  left: 34%;
-  top: 5%;
+  left: 350px;
+  top: 45px;
+  width: 75%;
 }
 
 .felineFactsText {
-  padding: 60px;
   text-align: center;
 }
 
 .felineFactsText h1 {
+  background-color: #F7D4BC;
+  font-family: 'Arapey', serif;
+  font-size: 50px;
+  padding: 50px;
+}
+
+.felineFactsText p {
+  background-color: #C7EAE4;
+  font-size: 20px;
+  padding: 50px;
+}
+
+.buttonContainer {
+  background-color: #CF8BA9;
   font-size: 40px;
+  padding: 50px;
 }
 
 
@@ -104,6 +153,8 @@
 -add background color to menu when you scroll down
 -and change menu to fixed when scroll down
 -change size of homepage header
+-change menu to dropdown
+-make homepage header smaller
 
 */
 

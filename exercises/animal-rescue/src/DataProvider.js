@@ -43,16 +43,16 @@ newFact = (e) => {
 }
 
 handleFactCounter = () => {
-    this.state.counter > 4 && this.setState({color1: "yellow"})
-    this.state.counter > 9 && this.setState({color2: "yellow"})
-    this.state.counter > 14 && this.setState({color3: "yellow"})
-    this.state.counter > 19 && this.setState({color4: "yellow"})
-    this.state.counter > 24 && this.setState({color5: "yellow"})
-    this.state.counter > 29 && this.setState({color6: "yellow"})
-    this.state.counter > 34 && this.setState({color7: "yellow"})
-    this.state.counter > 39 && this.setState({color8: "yellow"})
-    this.state.counter > 44 && this.setState({color9: "yellow"})
-    this.state.counter > 49 && this.setState({color10: "yellow"})
+    this.state.counter > 4 && this.setState({color1: "#FAE3E3"})
+    this.state.counter > 9 && this.setState({color2: "#FAE3E3"})
+    this.state.counter > 14 && this.setState({color3: "#FAB3A9"})
+    this.state.counter > 19 && this.setState({color4: "#FAB3A9"})
+    this.state.counter > 24 && this.setState({color5: "#CF8BA9"})
+    this.state.counter > 29 && this.setState({color6: "#CF8BA9"})
+    this.state.counter > 34 && this.setState({color7: "#E06C9F"})
+    this.state.counter > 39 && this.setState({color8: "#E06C9F"})
+    this.state.counter > 44 && this.setState({color9: "#F92A82"})
+    this.state.counter > 49 && this.setState({color10: "#F92A82"})
 }
 
   render() {

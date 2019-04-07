@@ -37,7 +37,7 @@ let style10 = {
   return (
     <div className="sideBar">
         <h3 className="sideHeader">Cat Lady Nirvana</h3>
-        <img className="catLadyImg" src="http://joyang.ca/wp-content/uploads/2013/04/2010_CatLady.jpg"></img>
+        <img alt="cat lady" className="catLadyImg" src="http://joyang.ca/wp-content/uploads/2013/04/2010_CatLady.jpg"></img>
         <div className="benchmarks">
             <p>cat ninja</p>
             <p>cat advocate</p>

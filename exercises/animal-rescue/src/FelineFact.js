@@ -7,7 +7,9 @@ function FelineFact(props) {
         <div className="felineFactsText">
             <h1>FELINE FACTS</h1>
             <p>{props.displayFact}</p>
-            <button onClick={(e) => {props.newFact(e)}}>Click for a fact</button>
+            <div className="buttonContainer">
+                <button onClick={(e) => {props.newFact(e)}}>Click for a fact</button>
+            </div>
         </div>
     </div>
   )
