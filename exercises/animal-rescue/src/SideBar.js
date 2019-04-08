@@ -1,5 +1,6 @@
 import React from 'react'
 import {withData} from "./DataProvider"
+import {withRouter} from "react-router-dom"
 
 function SideBar(props) {
 
@@ -35,7 +36,7 @@ let style10 = {
 }
 
   return (
-    <div className="sideBar">
+    <div className={props.location.pathname === "/" ? "bottomBar" : "sideBar"}>           
         <h3 className="sideHeader">Cat Lady Nirvana</h3>
         <img alt="cat lady" className="catLadyImg" src="http://joyang.ca/wp-content/uploads/2013/04/2010_CatLady.jpg"></img>
         <div className="benchmarks">
@@ -62,8 +63,16 @@ let style10 = {
             <div style={style2} className="bar2"></div>
             <div style={style1} className="bar1"></div>
         </div>
+        <div className="reset">
+            <button onClick={(e) => {props.resetButton(e)}}>Reset</button>
+        </div>
     </div>
   )
 }
 
-export default withData(SideBar);
+export default withRouter(withData(SideBar));
+
+// NOTE:
+// -changing static components: 
+//     -import withRouter so that you have access to location path as props
+//     -create a ternary in the container div so that the styling changes according to the pathway
