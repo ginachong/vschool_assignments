@@ -3,16 +3,30 @@
   background-color: #F7D4BC;
 } */
 
+/* body {
+  border: solid blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr auto auto auto auto auto auto; */
+  /* grid-gap: 10px;
+  grid-template-areas:
+  "nav nav nav nav"
+  "banner banner banner banner"
+  "side main main main"
+  "footer footer footer footer";
+} */
+
 .sideBar {
   border: solid;
   border-width: thin;
   border-color: #896978;
   padding: 15px;
-  float: left;
-  height: 100%;
+  position: absolute;
+  top: 14.5%;
+  right: 0;
+  height: 800px;
   width: 300px;
   display: grid;
-  /* position: relative; */
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
   "img img img"
@@ -26,9 +40,9 @@
   border-width: thin;
   border-color: #896978;
   padding: 15px;
-  float: left;
   position: absolute;
-  top: 90%;
+  top: 110%;
+  right: 7px;
   height: 850px;
   width: 300px;
   display: grid;
@@ -64,10 +78,11 @@
 .benchmarks {
   grid-area: bench;
   font-family: 'Arapey', serif;
+  padding-top: 3px;
 }
 
 .benchmarks p {
-  padding-bottom: 12px;
+  padding-bottom: 38px;
 }
 
 .progressBar {
@@ -77,167 +92,405 @@
 .progressBar div {
   border: solid;
   border-width: thin;
-  padding: 15px;
-  margin: 14px;
+  padding: 12px;
+  margin: 16px;
 }
 
-.menuBar {
-  z-index: 1;
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  left: 340px;
-  padding: 5px;
-  width: 100vw;
-  height: 25px;
+.menu img {
+  max-height: 40px;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
-.menuBar div {
+.menu {
+  position: relative;
   display: inline-block;
-  padding-right: 10%;
-  padding-left: 10px;
-  font-size: 20px;
 }
 
-.menuBar div:visited {
+.dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdownLinks {
+  display: block;
+  margin: 20px;
+  font-size: 20px;
+  width: 150px;
   color: black;
 }
 
-.homeBar {
+.menu:hover .dropdown{
+  display: block;
+}
+
+/* .menuBar div:visited {
+  color: black;
+} */
+
+.homeMenuBar {
+  /* grid-area: nav; */
   z-index: 1;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   position: fixed;
   padding: 5px;
   width: 98%;
   height: 25px;
 }
 
-.homeBar div {
+.homeMenuBar div {
   font-size: 20px;
+  color: black;
+  padding-right: 30px;
 }
 
-.homePage {
-  /* position: absolute; */
-  /* left: 350px;
+/* .homeMenuBar div:visited {
+  color: pink;
+} */
+
+/* .homePage {
+  grid-area: banner;
+  position: absolute;
+  left: 350px;
   top: 45px;
-  width: 75%; */
-}
+  width: 75%;
+} */
 
 .homeBanner {
-  height: 600px;
+  height: 700px;
   position: relative;
-  background-image: url("https://i.pinimg.com/originals/54/0b/df/540bdf0f83edd58966842eae5d25abd1.jpg");
+  background-image: url("https://amazingpict.com/wp-content/uploads/2015/06/cute-black-white-cat-in-high-resolution.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
 }
-
-/* .bannerImg{
-  position: absolute;
-  opacity: 0.5;
-  height: 500px;
-} */
 
 .bannerOverlay {
   /* position: absolute; */
-  height: 600px;
+  height: 700px;
   background-color: white;
-  opacity: 0.7;
+  opacity: 0.3;
 }
 
 .homeBanner h1{
   position: absolute;
-  font-family: 'Bad Script', cursive;
-  font-size: 70px;
-  top: 200px;
-  /* text-align: center; */
+  font-family: 'News Cycle', sans-serif;
+  font-size: 30px;
+  top: 10px;
   left: 0;
   right: 0;
   margin: auto;
   text-align: center;
 }
 
-/* how does this work with text align and left, right, margin?? */
+/* how does this work with text align PLUS left, right, margin?? */
 
-.homePage img {
+/* .homePage img {
   max-width: 250px;
   float: left;
-}
+} */
 
 .homeText {
-  position: absolute;
-  left: 350px;
-  top: 85.3%;
-  width: 75%;
+  /* margin-top: 25px; */
+  margin-right: 340px;
+  /* position: absolute; */
+  /* left: 350px;
+  top: 58%;
+  width: 75%; */
 }
 
 .homeText h4 {
-  background-color: #F7D4BC;
-  padding: 50px;
+  /* background-color: rgba(224, 224, 224, 0.973); */
+  /* border: 1px solid; */
+  padding: 110px;
+  font-family: 'Arapey', serif;
+  font-size: 25px;
+  margin: 0;
+  /* margin-bottom: 60px;
+  margin-top: 80px; */
+}
+
+.p1 {
+  font-weight: bold;
+  /* background-color: black; */
+  padding: 110px;
+  font-family: 'Arapey', serif;
+  font-size: 25px;
+  /* margin-bottom: 60px; */
+}
+
+.p2 {
+  position: relative;
+  font-weight: bold;
+  /* background-color: rgb(150, 150, 150); */
+  padding: 110px;
   font-family: 'Arapey', serif;
   font-size: 25px;
 }
 
-.p1 {
-  background-color: #C7EAE4;
-  padding: 50px;
-  font-family: 'Arapey', serif;
-  font-size: 20px;
-}
-
-.p2 {
-  background-color: #CF8BA9;
-  padding: 50px;
-  font-family: 'Arapey', serif;
-  font-size: 20px;
-}
-
-.felineFactsPage {
+.p2 span {
   position: absolute;
-  left: 350px;
-  top: 45px;
-  width: 75%;
+  right: 3%;
+  top: 31%;
+}
+
+.p2 > span > img {
+  max-height: 80px;
 }
 
 .felineFactsText {
+  margin-top: 25px;
+  margin-right: 340px;
   text-align: center;
 }
 
-.felineFactsText h1 {
-  background-color: #F7D4BC;
-  font-family: 'Arapey', serif;
-  font-size: 50px;
-  padding: 50px;
+.ffHeaderBox {
+  background-image: url("https://i.pinimg.com/originals/d0/3b/f0/d03bf0760cf16ffde433a9c926be80ce.jpg");
+  height: 400px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.6;
 }
 
-.felineFactsText p {
-  background-color: #C7EAE4;
+.ffHeader {
+  position: relative;
+}
+
+.ffHeaderBorder {
+  border: 1px solid gray;
+  height: 91%;
+  position: absolute;
+  width: 96%;
+  top: 4%;
+  left: 2%;
+}
+
+.ffHeader > h1 {
+  position: absolute;
+  font-family: 'Arapey', serif;
+  font-size: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 40%;
+  color: white;
+  letter-spacing: 10px;
+}
+
+.ffFacts {
+  position: relative;
+  height: 350px;
+}
+
+.ffFactsBox {
+  border: 1px solid gray;
+  position: absolute;
+  width: 96%;
+  top: 4%;
+  left: 2%;
+  height: 91%;
+  border-radius: 15px;
+}
+
+.ffFacts p {
+  position: absolute;
   font-size: 20px;
   padding: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 25%;
 }
 
-.buttonContainer {
-  background-color: #CF8BA9;
+.ffButton {
   font-size: 40px;
-  padding: 50px;
+  padding-top: 15px;
+  padding-bottom: 45px;
+}
+
+.ffButton button {
+  width: 150px;
+  height: 30px;
+  font-size: 15px;
 }
 
 .capturePage {
-  position: absolute;
-  left: 350px;
-  top: 45px;
-  width: 75%;
+  margin-top: 25px;
+  margin-right: 340px;
   text-align: center;
 }
 
-.capturePage h1 {
-  background-color: #F7D4BC;
-  font-family: 'Arapey', serif;
-  font-size: 50px;
-  padding: 50px;
+.ccHeaderBox {
+  background-image: url("https://cdn.pixabay.com/photo/2016/04/08/19/51/watercolor-1316867__340.jpg");
+  height: 400px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.6;
 }
 
-.capturePage img {
-  padding: 50px;
+.ccHeader {
+  position: relative;
+}
+
+.ccHeaderBorder {
+  border: 1px solid gray;
+  height: 91%;
+  position: absolute;
+  width: 96%;
+  top: 4%;
+  left: 2%;
+}
+
+.ccHeader > h1 {
+  position: absolute;
+  font-family: 'Arapey', serif;
+  font-size: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 40%;
+  color: white;
+  letter-spacing: 10px;
+}
+
+.ccPhotos {
+  position: relative;
+  height: 400px;
+  width: 800px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.ccPhotosBox {
+  border: 1px solid gray;
+  position: absolute;
+  width: 96%;
+  height: 91%;
+  top: 4%;
+  border-radius: 15px;
+}
+
+.ccPhotos img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 12%;
+}
+
+.ccButton {
+  font-size: 40px;
+  padding-bottom: 30px;
+}
+
+.ccButton button {
+  width: 150px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.footer {
+  background-color: rgb(235, 233, 233);
+  height: 100px;
+  top: 230%;
+  width: 100%;
+  /* margin-top: 5px; */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.social {
+  top: 6%;
+  margin: 20px;
+}
+
+@media only screen and (max-width: 1140px){
+
+  .homeText h4, .p1, .p2{
+    font-size: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 900px){
+
+  .homeText h4, .p1, .p2{
+    padding: 100px;
+    /* font-size: 15px; */
+  }
+
+  .p2 > span > img {
+    max-height: 70px;
+  }
+}
+
+@media only screen and (max-width: 750px){
+
+  .homeText h4, .p1, .p2{
+    padding: 100px;
+    /* font-size: 15px; */
+  }
+
+  .p2 > span > img {
+    max-height: 60px;
+  }
+}
+
+@media only screen and (max-width: 700px){
+
+  .homeText {
+    margin-top: 930px;
+    margin-right: 0;
+  }
+
+  .bottomBar {
+    width: 94%;
+  }
+
+  .homeText h4, .p1, .p2{
+    padding: 80px;
+    font-size: 15px;
+  }
+
+  .p2 > span > img {
+    visibility: hidden;
+  }
+
+  .felineFactsText h1 {
+    font-size: 40px;
+  }
+
+  .buttonContainer {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+
+  .felineFactsText {
+    position: absolute;
+    top: 910px;
+    width: 98%;
+  }
+
+  .footer {
+    position: absolute;
+    top: 2350px;
+  }
+
+  .sideBar {
+    width: 94%;
+  }
+
+  .capturePage {
+    position: absolute;
+    top: 850px;
+    width: 98%;
+  }
+  
 }
 
 
@@ -249,6 +502,7 @@
 -change size of homepage header
 -change menu to dropdown
 -make homepage header smaller
+-change social icons opacity on hover
 
 */
 

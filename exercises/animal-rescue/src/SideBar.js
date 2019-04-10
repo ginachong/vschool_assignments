@@ -1,6 +1,7 @@
 import React from 'react'
 import {withData} from "./DataProvider"
 import {withRouter} from "react-router-dom"
+import Confetti from 'react-confetti'
 
 function SideBar(props) {
 
@@ -36,19 +37,16 @@ let style10 = {
 }
 
   return (
-    <div className={props.location.pathname === "/" ? "bottomBar" : "sideBar"}>           
+    <div className={props.location.pathname === "/" ? "bottomBar" : "sideBar"}>
+    <Confetti run={props.recycle} />           
         <h3 className="sideHeader">Cat Lady Nirvana</h3>
         <img alt="cat lady" className="catLadyImg" src="http://joyang.ca/wp-content/uploads/2013/04/2010_CatLady.jpg"></img>
         <div className="benchmarks">
+            <p>cat whisperer</p>
             <p>cat ninja</p>
-            <p>cat advocate</p>
-            <p>cat lover</p>
-            <p>no soul</p>
-            <p>no soul</p>
-            <p>no soul</p>
-            <p>no soul</p>
-            <p>no soul</p>
-            <p>no soul</p>
+            <p>#catstagrammer</p>
+            <p>cat cafe hipster</p>
+            <p>catwondo white belt</p>
             <p>no soul</p>
         </div>
         <div className="progressBar">

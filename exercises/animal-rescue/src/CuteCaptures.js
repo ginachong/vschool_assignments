@@ -3,15 +3,22 @@ import {withData} from "./DataProvider"
 
 function CuteCaptures(props) {
 
-const height = props.height.toString()
 const width = props.width.toString()
+// const height = props.height.toString()
 
   return (
     <div className="capturePage">
-      <h1>Cute Captures</h1>
-      <img alt="cute kitten" src={"https://placekitten.com/" + height + "/" + width}></img>
-      <div className="buttonContainer">
-        <button onClick={(e) => {props.photoButton(e)}}>Click for a cat photo</button>
+            <div className="ccHeader">
+                <div className="ccHeaderBox"></div>
+                <div className="ccHeaderBorder"></div>
+                <h1>CUTE CAPTURES</h1>
+            </div>
+            <div className="ccPhotos">
+                <div className="ccPhotosBox"></div>
+                <img alt="cute kitten" src={"https://placekitten.com/" + width + "/300"}></img>
+            </div>        
+      <div className="ccButton">
+        <button onClick={(e) => {props.photoButton(e)}}>Click for a photo</button>
       </div>
     </div>
   )

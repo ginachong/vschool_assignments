@@ -4,7 +4,6 @@ import App from './App';
 import DataProvider from './DataProvider';
 import { BrowserRouter } from "react-router-dom"
 
-
 export const {Provider, Consumer} = React.createContext()
 
 

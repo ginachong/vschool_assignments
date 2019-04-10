@@ -7,20 +7,18 @@ import Menu from "./Menu"
 import {Switch, Route} from "react-router-dom"
 import CuteCaptures from './CuteCaptures';
 import Footer from "./Footer"
-import TicTacToe from "./TicTacToe"
 
 function App(props){
-  console.log(props)
   return(
       <div>
-        <SideBar {...props}/>
-        <Menu />
+        {/* <SideBar {...props}/>
+        <Menu /> */}
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route {...props} path="/felinefacts" component={FelineFact} /> 
-          <Route {...props} path="/cutecaptures" component={CuteCaptures} /> 
+          {/* <Route {...props} path="/felinefacts" component={FelineFact} /> 
+          <Route {...props} path="/cutecaptures" component={CuteCaptures} />  */}
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </div>
   )
 }

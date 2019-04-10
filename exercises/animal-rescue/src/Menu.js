@@ -8,6 +8,8 @@ function Menu(props) {
     const style = {
         textDecoration: "none",
         fontFamily: "'Arapey', serif",
+        color: "black",
+        // visibility: props.visibility,
     }
 
     const backgroundStyle = {
@@ -15,17 +17,27 @@ function Menu(props) {
     }
 
     return (
-        <div style={backgroundStyle} className={props.location.pathname === "/" ? "homeBar" : "menuBar"}>
-            <div className="menuHome">
-                <Link style={style} to="/">Home</Link>
-            </div>
-            <div>
-                <Link style={style} to="/felinefacts">Feline Facts</Link>
-            </div>
-            <div>
-                <Link style={style} to="/cutecaptures">Cute Captures</Link>
-            </div>
+
+        <div className="menu">
+            <img className="menuImg" src="https://www.freeiconspng.com/uploads/menu-icon-16.jpg"></img>
+             <div className="dropdown">
+                <Link className="dropdownLinks" style={style} to="/">Home</Link>
+                <Link className="dropdownLinks" style={style} to="/felinefacts">Feline Facts</Link>
+                <Link className="dropdownLinks" style={style} to="/cutecaptures">Cute Captures</Link>
+             </div>
         </div>
+
+        // <div style={backgroundStyle} className={props.location.pathname === "/" ? "homeMenuBar" : "menuBar"}>
+        //     <div className="menuHome">
+        //         <Link style={style} to="/">Home</Link>
+        //     </div>
+        //     <div>
+        //         <Link style={style} to="/felinefacts">Feline Facts</Link>
+        //     </div>
+        //     <div>
+        //         <Link style={style} to="/cutecaptures">Cute Captures</Link>
+        //     </div>
+        // </div>
     )
 }
 

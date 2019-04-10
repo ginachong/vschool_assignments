@@ -21,15 +21,18 @@ export default class AnimalProvider extends Component {
             color8: "white",
             color9: "white",
             color10: "white",
-            width: 200,
-            height: 300,
+            height: 200,
+            width: 300,
             backgroundColor: "none",
-            recycle: false,
         }
     }
 
 componentDidMount(){
     axios.get("https://vschool-cors.herokuapp.com?url=https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=100").then(response => {
+        // axios.get("https://cataas.com/cat").then(response => {
+        //     console.log(response.data)
+        //     return this.setState({photoData: response.data})
+        // })
         return this.setState({factData: response.data})
     })
 }
@@ -59,12 +62,6 @@ handleFactCounter = () => {
     this.state.counter > 23 && this.setState({color8: "#E06C9F"})
     this.state.counter > 26 && this.setState({color9: "#F92A82"})
     this.state.counter > 29 && this.setState({color10: "#F92A82"})
-
-    if(this.state.counter > 29){
-        this.setState({recycle: true})
-    } else{
-        this.setState({recycle: false})
-    }
 }
 
 photoButton = (e) => {
@@ -75,9 +72,12 @@ photoButton = (e) => {
         )
     })
     this.handleFactCounter()
-    let num = Math.floor(Math.random() * 7) + 1
+    let num1 = Math.floor(Math.random() * 7) + 1
+    let num2 = Math.floor(Math.random() * 7) + 1
+    console.log(num1, num2)
     return this.setState(
-        {width: num * 100}
+        {height: num1 * 100,
+        width: num2 * 100}
     )
 }
 
@@ -96,7 +96,6 @@ resetButton = (e) => {
         color9: "white",
         color10: "white",
     })
-    this.handleFactCounter()
 }
 
 handleScroll = () => {
