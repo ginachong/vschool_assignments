@@ -1,11 +1,17 @@
 {
-  "name": "cat-lady-daily",
+  "name": "animal-rescue",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "confetti-js": "0.0.14",
     "react": "^16.8.6",
+    "react-confetti": "^2.7.3",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-player": "^1.11.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "react-social-icons": "^4.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

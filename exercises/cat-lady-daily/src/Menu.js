@@ -12,18 +12,19 @@ function Menu(props) {
         // visibility: props.visibility,
     }
 
-    const backgroundStyle = {
-        backgroundColor: props.backgroundColor,
-    }
+    // const backgroundStyle = {
+    //     backgroundColor: props.backgroundColor,
+    // }
 
     return (
 
         <div className="menu">
-            <img className="menuImg" src="https://www.freeiconspng.com/uploads/menu-icon-16.jpg"></img>
+            <img alt="menu icon" className="menuImg" src="https://www.freeiconspng.com/uploads/menu-icon-16.jpg"></img>
              <div className="dropdown">
                 <Link className="dropdownLinks" style={style} to="/">Home</Link>
                 <Link className="dropdownLinks" style={style} to="/felinefacts">Feline Facts</Link>
                 <Link className="dropdownLinks" style={style} to="/cutecaptures">Cute Captures</Link>
+                <Link className="dropdownLinks" style={style} to="/tictactoe">Tic Cat Toe</Link>
              </div>
         </div>
 

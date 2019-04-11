@@ -15,7 +15,7 @@ export default function HomePage() {
                 </div>
                 <p className="p1">Cat Lady Daily's purpose is to raise your happiness level through tabby trivia and purrfect photos.</p>
                 <hr/>
-                <p className="p2">Click through the daily feline facts, choose your favorite cute captures, and watch the side bar as it displays your happiness slowly rising to cat lady nirvana.<span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbN51sIYmtp9moI8SY79S8QdJJZy-cXWajpXaxjnZXge8mV11S"></img></span></p>
+                <p className="p2">Click through the daily feline facts, choose your favorite cute captures, and watch the side bar as it displays your happiness slowly rising to cat lady nirvana.<span><img alt="arrow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbN51sIYmtp9moI8SY79S8QdJJZy-cXWajpXaxjnZXge8mV11S"></img></span></p>
             </div>
     </div>
   )

@@ -25,6 +25,8 @@ export default class AnimalProvider extends Component {
             height: 300,
             backgroundColor: "none",
             recycle: false,
+            gameBoard:[1,2,3,4,5,6,7,8,9],
+            
         }
     }
 
@@ -103,6 +105,57 @@ handleScroll = () => {
     this.setState({backgroundColor: "gray"})
 } //-----> where do I set this???
 
+
+handleGameClick = (e) => {
+    e.preventDefault()
+    const array = this.state.gameBoard
+
+    for(let i = 0; i < 9; i++){
+        //
+        if(e.target.id === array[i] && !checkGameBoard(e.target.id))
+            this.setState({[e.target.id]: "visible"})
+    } this.opponentMove()
+}
+
+checkGameBoard = (positionIndex) => {
+    this.state.gameBoard[positionIndex] ? true : false
+}
+
+
+//create random number 1-9
+//check cat move
+//if cat is not visible, dog === visible
+opponentMove = () => {
+    let num = Math.floor(Math.random() * 9) +1
+    let correspondingCat = "this.state.cat" + num
+    console.log(correspondingCat)
+    if(correspondingCat !== "visible"){
+        return this.setState({["dog" + num]: "visible"})
+    }
+    else
+        this.opponentMove()
+}
+
+//if 
+//
+checkCatMove = () => {
+
+}
+
+checkWin = () => {
+
+}
+
+//create empty cat array and dog array, loop through objects and add relevant items.
+
+playAgain = (e) => {
+    e.preventDefault()
+    const array = Object.keys(this.state)
+    for(let i = 0; i < array.length; i++){
+            this.setState({[array[i]]: "visible"})
+    }
+}
+
   render() {
     
     const value = {
@@ -111,6 +164,7 @@ handleScroll = () => {
         photoButton: this.photoButton,
         resetButton: this.resetButton,
         handleScroll: this.handleScroll,
+        handleGameClick: this.handleGameClick,
     }
 
     return (
@@ -126,3 +180,7 @@ export const withData = Container => props => (
         {value => <Container {...value}{...props} />}
     </Consumer>
 )
+
+// NOTES:
+// -handleGameClick wasn't working because doBox was covering catBox.
+// I had to set catBox to z-index 1 so that it was the element being clicked.
