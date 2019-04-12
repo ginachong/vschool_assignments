@@ -356,9 +356,8 @@
 }
 
 .ccPhotos {
-  position: relative;
   height: 400px;
-  width: 800px;
+  position: relative;
   left: 0;
   right: 0;
   margin: auto;
@@ -408,7 +407,7 @@
 }
 
 .gamePage {
-  position: relative;
+  /* position: relative; */
   margin-top: 25px;
   margin-right: 340px;
   text-align: center;
@@ -481,15 +480,89 @@
   border: solid;
 }
 
-
 /* ----------------------------------------------------------------------------- */
 
-@media only screen and (max-width: 1140px){
+@media only screen and (max-width: 1200px){
 
   .homeText h4, .p1, .p2{
     font-size: 20px;
   }
 
+  .ffHeader h1 {
+    font-size: 70px;
+  }
+
+  .ccHeader h1 {
+    font-size: 70px;
+  }
+
+  .gamePage {
+    /* position: relative; */
+    margin-top: 25px;
+    margin-right: 340px;
+    text-align: center;
+    margin-top: 40px;
+    height: 835px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "game"
+    "game"
+    "score"
+    "score";
+  }
+  
+  .catBox {
+    z-index: 1;
+    grid-area: game;
+    border: solid;
+    width: 500px;
+    height: 500px;
+    left: 0;
+    display: grid;
+    grid-template-columns: 166.66px 166.66px 166.66px ;
+    grid-template-rows: 166.66px 166.66px 166.66px ;
+  }
+  
+  .dogBox {
+    grid-area: game;
+    border: solid;
+    width: 500px;
+    height: 500px;
+    left: 0;
+    display: grid;
+    grid-template-columns: 166.66px 166.66px 166.66px ;
+    grid-template-rows: 166.66px 166.66px 166.66px ;
+  }
+  
+  .scoreBox {
+    grid-area: score;
+    border: solid thin;
+    height: 300px;
+  }
+  
+  .messageBox {
+    height: 50%;
+    position: relative;
+  }
+  
+  .messageBox h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 30%;
+    font-size: 50px;
+    letter-spacing: 13px;
+  }
+
+}
+
+@media only screen and (max-width: 1000px){
+
+  .ccHeader h1 {
+    font-size: 50px;
+  }
 }
 
 @media only screen and (max-width: 900px){
@@ -502,6 +575,37 @@
   .p2 > span > img {
     max-height: 70px;
   }
+
+  .ffHeaderBox {
+    background-size: auto;
+  }
+
+  .ffHeader > h1 {
+    font-size: 50px;
+  }
+
+  .ccHeaderBox {
+    background-size: auto 100%;
+  }
+
+  .ccHeader h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 770px){
+
+  .ffHeader > h1 {
+    font-size: 40px;
+  }
+
+  .ffHeader > h1 {
+    font-size: 30px;
+  }
+
+  .ccHeader h1 {
+    font-size: 30px;
+  }
 }
 
 @media only screen and (max-width: 750px){
@@ -513,6 +617,14 @@
 
   .p2 > span > img {
     max-height: 60px;
+  }
+
+  .ffHeader > h1 {
+    font-size: 30px;
+  }
+
+  .ccHeader h1 {
+    font-size: 25px;
   }
 }
 
@@ -543,6 +655,10 @@
   .buttonContainer {
     font-size: 20px;
   }
+
+  .ffHeader > h1 {
+    font-size: 25px;
+  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -555,7 +671,7 @@
 
   .footer {
     position: absolute;
-    top: 2350px;
+    top: 1800px;
   }
 
   .sideBar {
@@ -564,10 +680,17 @@
 
   .capturePage {
     position: absolute;
-    top: 850px;
+    top: 900px;
     width: 98%;
   }
   
+  .ffHeader > h1 {
+    font-size: 40px;
+  }
+
+  .ccHeader h1 {
+    font-size: 40px;
+  }
 }
 
 
