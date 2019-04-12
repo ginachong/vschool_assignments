@@ -497,48 +497,29 @@
   }
 
   .gamePage {
-    /* position: relative; */
-    margin-top: 25px;
-    margin-right: 340px;
-    text-align: center;
-    margin-top: 40px;
-    height: 835px;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
     "game"
     "game"
     "score"
     "score";
   }
-  
+
   .catBox {
-    z-index: 1;
     grid-area: game;
-    border: solid;
-    width: 500px;
-    height: 500px;
-    left: 0;
-    display: grid;
-    grid-template-columns: 166.66px 166.66px 166.66px ;
-    grid-template-rows: 166.66px 166.66px 166.66px ;
   }
-  
+
   .dogBox {
     grid-area: game;
-    border: solid;
-    width: 500px;
-    height: 500px;
-    left: 0;
-    display: grid;
-    grid-template-columns: 166.66px 166.66px 166.66px ;
-    grid-template-rows: 166.66px 166.66px 166.66px ;
   }
   
   .scoreBox {
     grid-area: score;
+    display: relative;
     border: solid thin;
     height: 300px;
+    margin-top: 5px;
   }
   
   .messageBox {
@@ -590,6 +571,14 @@
 
   .ccHeader h1 {
     font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 860px){
+
+  .sideBar {
+    width: 94%;
+    margin-top: 850px;
   }
 }
 
