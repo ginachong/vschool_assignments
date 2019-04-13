@@ -16,15 +16,15 @@ let cat7 = {visibility: props.catseven}
 let cat8 = {visibility: props.cateight}
 let cat9 = {visibility: props.catnine}
 
-let dog1 = {visibility: props.dog1}
-let dog2 = {visibility: props.dog2}
-let dog3 = {visibility: props.dog3}
-let dog4 = {visibility: props.dog4}
-let dog5 = {visibility: props.dog5}
-let dog6 = {visibility: props.dog6}
-let dog7 = {visibility: props.dog7}
-let dog8 = {visibility: props.dog8}
-let dog9 = {visibility: props.dog9}
+let dog1 = {visibility: props.dogone}
+let dog2 = {visibility: props.dogtwo}
+let dog3 = {visibility: props.dogthree}
+let dog4 = {visibility: props.dogfour}
+let dog5 = {visibility: props.dogfive}
+let dog6 = {visibility: props.dogsix}
+let dog7 = {visibility: props.dogseven}
+let dog8 = {visibility: props.dogeight}
+let dog9 = {visibility: props.dognine}
 
 ReactPlayer.canPlay("/src/TomCat.mp3")
     return(

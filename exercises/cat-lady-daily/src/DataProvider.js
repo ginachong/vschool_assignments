@@ -34,15 +34,15 @@ export default class AnimalProvider extends Component {
             catseven: "hidden",
             cateight: "hidden",
             catnine: "hidden",
-            dog1: "hidden",
-            dog2: "hidden",
-            dog3: "hidden",
-            dog4: "hidden",
-            dog5: "hidden",
-            dog6: "hidden",
-            dog7: "hidden",
-            dog8: "hidden",
-            dog9: "hidden",
+            dogone: "hidden",
+            dogtwo: "hidden",
+            dogthree: "hidden",
+            dogfour: "hidden",
+            dogfive: "hidden",
+            dogsix: "hidden",
+            dogseven: "hidden",
+            dogeight: "hidden",
+            dognine: "hidden",
             one:"unoccupied",
             two: "unoccupied",
             three: "unoccupied",
@@ -134,12 +134,15 @@ handleGameClick = (e) => {
     e.preventDefault()
     this.progressCounter()
     this.handleFactCounter()
+
     const array = Object.keys(this.state)
     for(let i = 0; i < array.length; i++){
         if(e.target.id === array[i]){
-            this.setState({[e.target.id]: "occupied",
-            catPlaying: true,
-            ["cat" + e.target.id]: "visible"})
+            if(("dog" + e.target.id) !== "visible"){
+                this.setState({[e.target.id]: "occupied",
+                catPlaying: true,
+                ["cat" + e.target.id]: "visible"})
+            } else{alert("choose an unoccupied square")}
         }
     } 
     setTimeout(this.opponentMove, 300)
@@ -170,37 +173,37 @@ opponentMove = () => {
         switch(num){
             case 1:
                 if(this.state.one === "unoccupied")
-                    this.setState({one: "occupied", dog1: "visible"}) 
+                    this.setState({one: "occupied", dogone: "visible"}) 
                 else return this.opponentMove()
                 break;
             case 2:
                 if(this.state.two === "unoccupied")
-                    this.setState({two: "occupied", dog2: "visible"}) 
+                    this.setState({two: "occupied", dogtwo: "visible"}) 
                 else return this.opponentMove()
                 break;
             case 3:
                 if(this.state.three === "unoccupied")
-                    this.setState({three: "occupied", dog3: "visible"}) 
+                    this.setState({three: "occupied", dogthree: "visible"}) 
                 else return this.opponentMove()
                 break;
             case 4:
                 if(this.state.four === "unoccupied")
-                    this.setState({four: "occupied", dog4: "visible"}) 
+                    this.setState({four: "occupied", dogfour: "visible"}) 
                 else return this.opponentMove()
                 break;
             case 5:
                 if(this.state.five === "unoccupied")
-                    this.setState({five: "occupied", dog5: "visible"}) 
+                    this.setState({five: "occupied", dogfive: "visible"}) 
                 else return this.opponentMove()
                 break;
             case 6:
                 if(this.state.six === "unoccupied")
-                    this.setState({six: "occupied", dog6: "visible"}) 
+                    this.setState({six: "occupied", dogsix: "visible"}) 
                 else return this.opponentMove()
                 break;
             case 7:
                 if(this.state.seven === "unoccupied")
-                    this.setState({seven: "occupied", dog7: "visible"}) 
+                    this.setState({seven: "occupied", dogseven: "visible"}) 
                 else return this.opponentMove()
                 break;
             case 8:
@@ -210,7 +213,7 @@ opponentMove = () => {
                 break;
             case 9:
                 if(this.state.nine === "unoccupied")
-                    this.setState({nine: "occupied", dog9: "visible"}) 
+                    this.setState({nine: "occupied", dognine: "visible"}) 
                 else return this.opponentMove()
                 break;
             default: 
@@ -238,21 +241,21 @@ checkWin = () => {
     if(this.state.catseven === "visible" && this.state.catfive === "visible" && this.state.catthree === "visible")
         this.setState({message: "WINNER"})
 //------------------------------------------------------------------------------------------------------
-    if(this.state.dog1 === "visible" && this.state.dog2 === "visible" && this.state.dog3 === "visible")
+    if(this.state.dogone === "visible" && this.state.dogtwo === "visible" && this.state.dogthree === "visible")
         this.setState({message: "LOSER"})
-    if(this.state.dog1 === "visible" && this.state.dog4 === "visible" && this.state.dog7 === "visible")
+    if(this.state.dogone === "visible" && this.state.dogfour === "visible" && this.state.dogseven === "visible")
         this.setState({message: "LOSER"})
-    if(this.state.dog1 === "visible" && this.state.dog5 === "visible" && this.state.dog9 === "visible")
+    if(this.state.dogone === "visible" && this.state.dogfive === "visible" && this.state.dognine === "visible")
         this.setState({message: "LOSER"})
-    if(this.state.dog3 === "visible" && this.state.dog6 === "visible" && this.state.dog9 === "visible")
+    if(this.state.dogthree === "visible" && this.state.dogsix === "visible" && this.state.dognine === "visible")
         this.setState({message: "LOSER"})
-    if(this.state.dog4 === "visible" && this.state.dog5 === "visible" && this.state.dog6 === "visible")
+    if(this.state.dogfour === "visible" && this.state.dogfive === "visible" && this.state.dogsix === "visible")
         this.setState({message: "LOSER"})
-    if(this.state.dog7 === "visible" && this.state.dog8 === "visible" && this.state.dog9 === "visible")
+    if(this.state.dogseven === "visible" && this.state.dog8 === "visible" && this.state.dognine === "visible")
         this.setState({message: "LOSER"})
-    if(this.state.dog2 === "visible" && this.state.dog5 === "visible" && this.state.dog8 === "visible")
+    if(this.state.dogtwo === "visible" && this.state.dogfive === "visible" && this.state.dog8 === "visible")
         this.setState({message: "LOSER"})
-    if(this.state.dog3 === "visible" && this.state.dog5 === "visible" && this.state.dog7 === "visible")
+    if(this.state.dogthree === "visible" && this.state.dogfive === "visible" && this.state.dogseven === "visible")
         this.setState({message: "LOSER"})
 }
 
@@ -284,15 +287,15 @@ playAgain = (e) => {
         "catnine",]
 
     const dogArray = [
-        "dog1", 
-        "dog2",  
-        "dog3", 
-        "dog4", 
-        "dog5", 
-        "dog6", 
-        "dog7", 
+        "dogone", 
+        "dogtwo",  
+        "dogthree", 
+        "dogfour", 
+        "dogfive", 
+        "dogsix", 
+        "dogseven", 
         "dog8", 
-        "dog9",]
+        "dognine",]
 
     for(let i = 0; i < squareArray.length; i++){
             this.setState({[squareArray[i]]: "unoccupied"})
@@ -342,37 +345,3 @@ export const withData = Container => props => (
 // - had trouble with dogs still showing up on the same square as cats.
 //Realized it's because it was happening before state had a chance to update from
 //unoccupied to occupied. Solved by adding a set timeout on the function.
-
-
-// const squareArray = [
-//     this.state.one, 
-//     this.state.two,  
-//     this.state.three, 
-//     this.state.four, 
-//     this.state.five, 
-//     this.state.six, 
-//     this.state.seven, 
-//     this.state.eight, 
-//     this.state.nine,]
-
-// const catArray = [
-//     this.state.catone, 
-//     this.state.cattwo,  
-//     this.state.catthree, 
-//     this.state.catfour, 
-//     this.state.catfive, 
-//     this.state.catsix, 
-//     this.state.catseven, 
-//     this.state.cateight, 
-//     this.state.catnine,]
-
-// const dogArray = [
-//     this.state.dog1, 
-//     this.state.dog2,  
-//     this.state.dog3, 
-//     this.state.dog4, 
-//     this.state.dog5, 
-//     this.state.dog6, 
-//     this.state.dog7, 
-//     this.state.dog8, 
-//     this.state.dog9,]
