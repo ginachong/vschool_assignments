@@ -3,7 +3,7 @@ import axios from "axios"
 import {Provider, Consumer} from "./index"
 
 
-export default class AnimalProvider extends Component {
+export default class DataProvider extends Component {
     constructor(){
         super()
         this.state = {

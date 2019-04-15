@@ -1,20 +1,15 @@
 
-/* .container {
-  background-color: #F7D4BC;
-} */
-
 /* body {
   border: solid blue;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* grid-template-rows: 1fr auto auto auto auto auto auto; */
-  /* grid-gap: 10px;
+  grid-template-rows: 1fr auto auto auto auto auto auto;
+  grid-gap: 10px;
   grid-template-areas:
-  "nav nav nav nav"
-  "banner banner banner banner"
-  "side main main main"
+  ". . . ."
+  ". . . sideBar"
   "footer footer footer footer";
-} */
+}  */
 
 .sideBar {
   border: solid;
@@ -31,69 +26,82 @@
   grid-template-areas: 
   "img img img"
   "header header header"
-  "bench progress progress"
+  "bench bar bar"
   "reset reset reset";
 }
 
 .bottomBar {
+  top: 270%;
+  margin-bottom: 10px;
   border: solid;
   border-width: thin;
   border-color: #896978;
   padding: 15px;
-  position: absolute;
-  top: 110%;
-  right: 7px;
-  height: 850px;
-  width: 300px;
+  /* position: absolute; */
+  width: 98%;
+  height: 120px;
   display: grid;
   /* position: relative; */
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
   grid-template-areas: 
-  "img img img"
-  "header header header"
-  "bench progress progress"
-  "reset reset reset";
+  "pHeader pHeader bench bench bench bench bench bench bench bench header img"
+  "pHeader pHeader bar bar bar bar bar bar bar bar header img"
+  "reset reset bar bar bar bar bar bar bar bar header img";
+}
+
+.progressHeader{
+  grid-area: pHeader;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-family: 'Arapey', serif;
+  font-size: 30px;
 }
 
 .catLadyImg {
   grid-area: img;
-  max-height: 200px;
-  left: 0;
-  right: 0;
-  margin: auto;
+  max-height: 130px;
 }
 
 .sideHeader {
+  grid-area: header;
   font-family: 'Arapey', serif;
   font-size: 30px;
-  grid-area: header;
   text-align: center;
 }
 
 .reset {
   grid-area: reset;
   text-align: center;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .benchmarks {
   grid-area: bench;
   font-family: 'Arapey', serif;
-  padding-top: 3px;
 }
 
 .benchmarks p {
-  padding-bottom: 38px;
+  display: inline; 
+  padding-right: 70px;
 }
 
 .progressBar {
-  grid-area: progress;
+  grid-area: bar;
 }
 
 .progressBar div {
+  display: inline-block;
+  border-radius: 50%;
   border: solid;
   border-width: thin;
-  padding: 12px;
-  margin: 16px;
+  width: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-right: 37px;
 }
 
 .menu img {
@@ -125,12 +133,7 @@
   display: block;
 }
 
-/* .menuBar div:visited {
-  color: black;
-} */
-
 .homeMenuBar {
-  /* grid-area: nav; */
   z-index: 1;
   display: flex;
   flex-direction: row;
@@ -147,29 +150,52 @@
   padding-right: 30px;
 }
 
-/* .homeMenuBar div:visited {
-  color: pink;
-} */
-
-/* .homePage {
-  grid-area: banner;
-  position: absolute;
-  left: 350px;
-  top: 45px;
-  width: 75%;
-} */
-
-.homeBanner {
-  height: 700px;
-  position: relative;
-  background-image: url("https://amazingpict.com/wp-content/uploads/2015/06/cute-black-white-cat-in-high-resolution.jpg");
-  background-repeat: no-repeat;
+.footer {
+  background-color: rgb(235, 233, 233);
+  height: 100px;
+  top: 230%;
   width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
+.social {
+  top: 6%;
+  margin: 20px;
+}
+
+.homePage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+  "banner banner banner banner"
+  "homeText homeText homeText homeText "
+  " . . . . "
+}
+
+.homeBanner {
+  grid-area: banner;
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.homeBanner img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+/* this is the only method that worked for making this photo responsive
+--the Netflix way */
+
 .bannerOverlay {
-  /* position: absolute; */
-  height: 700px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background-color: white;
   opacity: 0.3;
 }
@@ -187,57 +213,35 @@
 
 /* how does this work with text align PLUS left, right, margin?? */
 
-/* .homePage img {
-  max-width: 250px;
-  float: left;
-} */
-
 .homeText {
+  grid-area: homeText;
   /* margin-top: 25px; */
-  margin-right: 340px;
+  /* margin-right: 340px; */
   /* position: absolute; */
   /* left: 350px;
   top: 58%;
   width: 75%; */
 }
 
-.homeText h4 {
-  /* background-color: rgba(224, 224, 224, 0.973); */
-  /* border: 1px solid; */
+.homeText p {
   padding: 110px;
   font-family: 'Arapey', serif;
   font-size: 25px;
-  margin: 0;
-  /* margin-bottom: 60px;
-  margin-top: 80px; */
-}
-
-.p1 {
   font-weight: bold;
-  /* background-color: black; */
-  padding: 110px;
-  font-family: 'Arapey', serif;
-  font-size: 25px;
-  /* margin-bottom: 60px; */
 }
 
-.p2 {
+.p3 {
   position: relative;
-  font-weight: bold;
-  /* background-color: rgb(150, 150, 150); */
-  padding: 110px;
-  font-family: 'Arapey', serif;
-  font-size: 25px;
 }
 
-.p2 span {
+.p3 span {
   position: absolute;
   right: 3%;
   top: 31%;
 }
 
-.p2 > span > img {
-  max-height: 80px;
+.p3 > span > img {
+  max-height: 100px;
 }
 
 .felineFactsText {
@@ -391,21 +395,6 @@
   font-size: 15px;
 }
 
-.footer {
-  background-color: rgb(235, 233, 233);
-  height: 100px;
-  top: 230%;
-  width: 100%;
-  /* margin-top: 5px; */
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.social {
-  top: 6%;
-  margin: 20px;
-}
-
 .gamePage {
   /* position: relative; */
   margin-top: 25px;
@@ -482,9 +471,61 @@
 
 /* ----------------------------------------------------------------------------- */
 
+@media only screen and (max-width: 1415px){
+
+  .progressBar div {
+    margin-right: 34px;
+  }
+
+  .benchmarks p {
+    padding-right: 65px;
+  }
+}
+
+@media only screen and (max-width: 1370px){
+
+  .progressBar div {
+    margin-right: 30px;
+  }
+
+  .benchmarks p {
+    padding-right: 58px;
+  }
+}
+
+@media only screen and (max-width: 1315px){
+
+  .progressBar div {
+    margin-right: 25px;
+  }
+
+  .benchmarks p {
+    padding-right: 50px;
+  }
+
+  .sideHeader {
+    font-size: 25px;
+  }
+
+  .progressHeader {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1245px){
+
+  .progressBar div {
+    margin-right: 20px;
+  }
+
+  .benchmarks p {
+    padding-right: 40px;
+  }
+}
+
 @media only screen and (max-width: 1200px){
 
-  .homeText h4, .p1, .p2{
+  .homeText p {
     font-size: 20px;
   }
 
@@ -539,18 +580,72 @@
 
 }
 
+@media only screen and (max-width: 1179px){
+
+  .progressBar div {
+    margin-right: 12px;
+  }
+
+  .benchmarks p {
+    padding-right: 25px;
+  }
+
+  .sideHeader {
+    font-size: 22px;
+  }
+
+  .progressHeader {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 1077px){
+
+  .progressBar div {
+    margin-right: 5px;
+  }
+
+  .benchmarks p {
+    font-size: 14px;
+  }
+}
+
 @media only screen and (max-width: 1000px){
 
   .ccHeader h1 {
     font-size: 50px;
   }
+
+  .benchmarks {
+    visibility: hidden;
+  }
+
+  .bottomBar {
+    padding: 15px;
+    width: 98%;
+    height: 120px;
+  }
+
+  .progressBar div{
+    width: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 4px;
+  }
+
+  .sideHeader {
+    font-size: 18px;
+  }
+
+  .progressHeader {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 900px){
 
-  .homeText h4, .p1, .p2{
-    padding: 100px;
-    /* font-size: 15px; */
+  .homeText p{
+    padding: 80px;
   }
 
   .p2 > span > img {
@@ -572,6 +667,13 @@
   .ccHeader h1 {
     font-size: 40px;
   }
+
+  .progressBar div{
+    width: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 2px;
+  }
 }
 
 @media only screen and (max-width: 860px){
@@ -579,6 +681,31 @@
   .sideBar {
     width: 94%;
     margin-top: 850px;
+  }
+
+  .progressBar div{
+    width: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 3.8px;
+  }
+
+  .sideHeader {
+    visibility: hidden;
+  }
+
+  /* .bottomBar {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+    "pHeader pHeader bench bench bench bench bench bench bench bench bar img"
+    "pHeader pHeader bar bar bar bar bar bar bar bar bar img"
+    "reset reset bar bar bar bar bar bar bar bar bar img";
+  } */
+
+  .progressBar div{
+    margin: 5.5px;
   }
 }
 
@@ -595,14 +722,24 @@
   .ccHeader h1 {
     font-size: 30px;
   }
+
+  .progressBar div{
+    width: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 2.5px;
+  }
+
+  .progressHeader {
+    visibility: hidden;
+  }
+
+  .reset {
+    visibility: hidden;
+  }
 }
 
 @media only screen and (max-width: 750px){
-
-  .homeText h4, .p1, .p2{
-    padding: 100px;
-    /* font-size: 15px; */
-  }
 
   .p2 > span > img {
     max-height: 60px;
@@ -615,22 +752,16 @@
   .ccHeader h1 {
     font-size: 25px;
   }
+
+  .progressBar div{
+    margin: 2px;
+  }
 }
 
 @media only screen and (max-width: 700px){
 
-  .homeText {
-    margin-top: 930px;
-    margin-right: 0;
-  }
-
   .bottomBar {
     width: 94%;
-  }
-
-  .homeText h4, .p1, .p2{
-    padding: 80px;
-    font-size: 15px;
   }
 
   .p2 > span > img {
@@ -647,6 +778,27 @@
 
   .ffHeader > h1 {
     font-size: 25px;
+  }
+
+  .progressBar div{
+    margin: 1.5px;
+  }
+
+  /* .bottomBar {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+    "pHeader pHeader bench bench bench bench bench bench bench bench bar img"
+    "bar bar bar bar bar bar bar bar bar bar bar img"
+    "bar bar bar bar bar bar bar bar bar bar bar img";
+  } */
+
+  .progressBar div{
+    width: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 3.8px;
   }
 }
 
@@ -680,7 +832,36 @@
   .ccHeader h1 {
     font-size: 40px;
   }
+
+  .progressBar div{
+    margin: 2.8px;
+  }
 }
+
+@media only screen and (max-width: 650px){
+
+  .progressBar div{
+    margin: 2px;
+  }
+}
+
+@media only screen and (max-width: 580px){
+
+  /* .progressBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  } */
+
+  .progressBar div{
+    margin: 1px;
+  }
+
+  .bottomBar img {
+    visibility: hidden;
+  }
+}
+
 
 
 /* responsive: 
@@ -696,11 +877,9 @@
 */
 
 
-
 /* NOTES: 
 
 -to remove underline from Link Component: use inline style 
-
 
 
 */
