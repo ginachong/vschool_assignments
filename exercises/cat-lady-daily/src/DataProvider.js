@@ -10,7 +10,7 @@ export default class AnimalProvider extends Component {
             factData: [],
             photoData: [],
             displayFact: "",
-            counter: 0,
+            counter: 1,
             color1: "white",
             color2: "white",
             color3: "white",
@@ -111,7 +111,7 @@ photoButton = (e) => {
 resetButton = (e) => {
     e.preventDefault()
     this.setState({
-        counter: 0,
+        counter: 1,
         color1: "white",
         color2: "white",
         color3: "white",

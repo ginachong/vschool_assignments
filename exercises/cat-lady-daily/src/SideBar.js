@@ -38,7 +38,7 @@ let style10 = {
 
   return (
     <div className={props.location.pathname === "/" ? "bottomBar" : "sideBar"}>
-    <Confetti recycle={props.recycle} />           
+    <Confetti width={300} recycle={props.recycle} />           
         <h3 className="sideHeader">Cat Lady Nirvana</h3>
         <img alt="cat lady" className="catLadyImg" src="http://joyang.ca/wp-content/uploads/2013/04/2010_CatLady.jpg"></img>
         <div className="benchmarks">
