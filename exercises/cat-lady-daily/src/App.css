@@ -1,20 +1,4 @@
 
-/* .container {
-  background-color: #F7D4BC;
-} */
-
-/* body {
-  border: solid blue;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* grid-template-rows: 1fr auto auto auto auto auto auto; */
-  /* grid-gap: 10px;
-  grid-template-areas:
-  "nav nav nav nav"
-  "banner banner banner banner"
-  "side main main main"
-  "footer footer footer footer";
-} */
 
 body {
   position: relative;
@@ -116,6 +100,7 @@ body {
   display: none;
   position: absolute;
   z-index: 2;
+  background-color: rgb(247, 247, 247);
 }
 
 .dropdownLinks {
@@ -402,6 +387,25 @@ body {
   text-align: center;
 }
 
+.homeFooter {
+  background-color: rgb(235, 233, 233);
+  height: 100px;
+  top: 230%;
+  width: 100%;
+  /* margin-top: 5px; */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.gameFooter {
+  background-color: rgb(235, 233, 233);
+  height: 100px;
+  top: 230%;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 .social {
   top: 6%;
   margin: 20px;
@@ -582,9 +586,9 @@ body {
     max-height: 70px;
   }
 
-  .ffHeaderBox {
+  /* .ffHeaderBox {
     background-size: auto;
-  }
+  } */
 
   .ffHeader > h1 {
     font-size: 50px;
@@ -606,8 +610,17 @@ body {
     margin-top: 850px;
   }
 
+  .felineFactsText{
+    width: 100%;
+  }
+
   .footer{
-    top: 1000px;
+    position: absolute;
+    top: 190%;
+  }
+
+  .capturePage{
+    width: 100%;
   }
 }
 
@@ -682,33 +695,91 @@ body {
 
 @media only screen and (max-width: 650px) {
 
-  .felineFactsText {
+  /* .felineFactsText {
     position: absolute;
     top: 910px;
     width: 98%;
-  }
-
-  /* .footer {
-    position: absolute;
-    top: 2350px;
   } */
 
-  .sideBar {
-    width: 94%;
-  }
+  /* .footer{
+    position: absolute;
+    top: 190%;
+  } */
 
-  .capturePage {
+  /* .sideBar {
+    width: 94%;
+  } */
+
+  /* .capturePage {
     position: absolute;
     top: 900px;
     width: 98%;
-  }
+  } */
   
+  .ffHeaderBox{
+    background-size: auto;
+  }
+
   .ffHeader > h1 {
     font-size: 40px;
   }
 
   .ccHeader h1 {
     font-size: 40px;
+  }
+
+  @media only screen and (max-width: 550px) {
+
+    .gamePage {
+      /* position: relative; */
+      margin-top: 25px;
+      text-align: center;
+      margin-top: 40px;
+      height: 400px;
+    }
+    
+    .catBox {
+      z-index: 1;
+      grid-area: game;
+      border: solid;
+      width: 350px;
+      height: 350px;
+      left: 0;
+      display: grid;
+      grid-template-columns: 116.66px 116.66px 116.66px ;
+      grid-template-rows: 116.66px 116.66px 116.66px ;
+    }
+    
+    .dogBox {
+      grid-area: game;
+      border: solid;
+      width: 350px;
+      height: 350px;
+      left: 0;
+      display: grid;
+      grid-template-columns: 116.66px 116.66px 116.66px ;
+      grid-template-rows: 116.66px 116.66px 116.66px ;
+    }
+    
+    .gameFooter {
+      position: absolute;
+      top: 353%;
+    }
+
+    /* .scoreBox {
+      grid-area: score;
+      border: solid thin;
+      height: 826px;
+    } */
+    
+    .messageBox {
+      height: 20%;
+      position: relative;
+    }
+    
+    .messageBox h1 {
+      font-size: 40px;
+    }
   }
 
   @media only screen and (max-width: 500px){
@@ -721,9 +792,7 @@ body {
       padding: 40px;
       font-size: 15px;
     }
-
   }
-
 }
 
 

@@ -20,7 +20,7 @@ function App(props){
           <Route {...props} path="/cutecaptures" component={CuteCaptures} /> 
           <Route {...props} path="/tictactoe" component={TicTacToe} />
         </Switch>
-        <Footer />
+        <Footer {...props}/>
       </div>
   )
 }
