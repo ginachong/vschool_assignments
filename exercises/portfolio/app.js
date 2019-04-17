@@ -18,9 +18,9 @@ project2img.addEventListener("click", e => {
 })
 
 project3img.addEventListener("click", e => {
-    handleClick(e, "http://selfish-butter.surge.sh/")
+    handleClick(e, "https://github.com/ginachong/vschool_assignments/tree/master/exercises/rpg")
 })
 
-project4img.addEventListener("click", e => {
-    handleClick(e, "http://selfish-butter.surge.sh/")
-})
+// project4img.addEventListener("click", e => {
+//     handleClick(e, "http://selfish-butter.surge.sh/")
+// })
