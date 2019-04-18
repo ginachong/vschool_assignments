@@ -12,14 +12,12 @@
 }
 
 .headerImg {
-    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsvNecm0NnRfwEZrQ4tZCeYsjst9sASOYNEGYTIlsMjOh5v6qMMQ"); */
     opacity: 0.5;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
     position: absolute;
-    /* background-repeat: no-repeat; */
 }
 
 .header h1, h2 {
@@ -31,7 +29,6 @@
 }
 
 .header h1 {
-    /* top: 35%; */
     bottom: 57%;
     font-family: 'Yulinda', cursive;
     font-size: 70px;
@@ -39,11 +36,9 @@
 }
 
 .header h2 {
-    /* top: 47%; */
     bottom: 52%;
     font-family: 'Playfair Display', serif;
     font-size: 18px;
-    /* opacity: 0.5; */
 }
 
 .arrow {
@@ -55,10 +50,13 @@
     margin: auto;
 }
 
+.arrow:hover {
+    cursor: pointer;
+}
+
 .homeContainers {
     font-family: 'Crimson Text', serif;
     padding: 40px;
-    /* line-height: 10px; */
 }
 
 .c1Text {
@@ -130,13 +128,6 @@
     position: relative;
     margin: 50px;
 }
-
-/* #c3 {
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-} */
 
 #c3 p {
     text-align: center;
@@ -219,9 +210,41 @@ footer {
     padding: 50px;
 }
 
-footer img {
-    max-width: 25px;
-    padding: 30px;
+footer div {
+    display: inline-block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    margin: 15px;
+    cursor: pointer;
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+
+#git {
+    background-image: url("media/black git icon.png");
+}
+
+#linkedIn {
+    background-image: url("media/black\ linkedin\ icon.png");
+}
+
+#insta {
+    background-image: url("media/brandico_2014-04-07_instagram_100_0_000000_none.png");
+}
+
+#git:hover {
+    background-image: url("media/pinkgiticon.png");
+}
+
+#linkedIn:hover {
+    background-image: url("media/pink linkedin icon.png");
+}
+
+#insta:hover {
+    background-image: url("media/pink instagram icon.png");
 }
 
 .contact a {
@@ -234,6 +257,43 @@ footer img {
 
 .contact a:hover{
     background-color: #CC7E85;
+}
+
+@media screen and (max-width: 1000px){
+
+    .c3Boxes h4 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 850px){
+
+    .c3Boxes h4 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    #c3 p {
+        text-align: center;
+        font-size: 18px;
+        padding: 0;
+    }
+
+    h4:nth-child(1){
+        border-right: none;
+    }
+
+    h4:nth-child(2){
+        border-right: none;
+    }
+
+    .blurbP{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
 }
 
 @media screen and (max-width: 700px){
@@ -271,20 +331,6 @@ footer img {
     
     .p2 {
         font-size: 20px;
-    }
-    
-    #c3 p {
-        text-align: center;
-        font-size: 18px;
-        padding: 0;
-    }
-
-    h4:nth-child(1){
-        border-right: none;
-    }
-    
-    h4:nth-child(2){
-        border-right: none;
     }
     
     .seeMore {
@@ -330,11 +376,9 @@ header {
     font-size: 40px;
     padding: 30px;
     font-family: 'Crimson Text', serif;
-    /* border: solid; */
 }
 
 .projects {
-    /* border: solid; */
     padding: 25px;
 }
 
@@ -344,6 +388,7 @@ header {
 
 .projects>img:hover{
     opacity: 1;
+    cursor: pointer;
 }
 
 .projects img {
@@ -357,7 +402,6 @@ header {
     height: 100px;
     width: 100%;
     font-family: 'Crimson Text', serif;
-    /* border: solid; */
 }
 
 #project2 {
@@ -382,7 +426,6 @@ header {
 
 .return {
     grid-area: return;
-    /* border: solid; */
     text-align: center;
     padding: 20px;
     margin-bottom: 90px;
