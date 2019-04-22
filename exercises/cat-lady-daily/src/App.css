@@ -622,6 +622,11 @@ body {
   .capturePage{
     width: 100%;
   }
+
+  .gameFooter {
+    position: absolute;
+    top: 193%;
+  }
 }
 
 

@@ -1,82 +1,27 @@
 const express = require("express")
 const app = express()
-const uuidv4 = require("uuid/v4")
-
-let bounties = [
-    {
-        firstName: "Uncle",
-        lastName: "Owen",
-        living: false,
-        bountyAmount: 1000,
-        type: "Jedi",
-        _id: uuidv4(),
-    },
-    {
-        firstName: "Ewan",
-        lastName: "McGregor",
-        living: true,
-        bountyAmount: 50000,
-        type: "Jedi",
-        _id: uuidv4(),
-    },
-    {
-        firstName: "Yoda",
-        lastName: "",
-        living: false,
-        bountyAmount: 1000000,
-        type: "Jedi",
-        _id: uuidv4(),
-    },
-    {
-        firstName: "Darth",
-        lastName: "Sidious",
-        living: false,
-        bountyAmount: 50000,
-        type: "Sith",
-        _id: uuidv4(),
-    },
-    {
-        firstName: "hot",
-        lastName: "guy",
-        living: true,
-        bountyAmount: 1000000,
-        type: "Sith",
-        _id: uuidv4(),
-    },
-]
+const morgan = require("morgan")
+const mongoose = require('mongoose')
+const PORT = process.env.PORT || 7000
 
 //Middleware
 app.use(express.json())
+app.use(morgan('dev'))
 
-app.get("/bounties", (req, res) => {
-    res.send(bounties)
+//Connect to MongoDB
+mongoose.connect('mongodb://localhost:27017/bounties', {useNewUrlParser: true}, () => {
+    console.log("connected to the DB")
 })
 
-app.post("/bounties", (req, res) => {
-    const newBounty = req.body;
-    newBounty._id = uuidv4();
-    bounties.push(newBounty);
-    res.send(bounties)
-})
+app.use("/bounties", require('./routes/bountiesRouter.js'))
 
-app.delete("/bounties/:_id", (req, res) => {
-    const bountyToDelete = bounties.find(bounty => bounty._id === req.params._id)
-    const newBounties = bounties.filter(bounty => bounty._id !== bountyToDelete._id)
-    bounties = newBounties
-    res.send(bounties)
-})
-
-app.put("bounties/:_id", (req, res) => {
-    const bountyToEdit = bounties.find(bounty => bounty._id === req.params._id)
-    
+//Global Error Handler
+app.use((err, req, res, next) => {
+    console.error(err)
+    return res.send({errMsg: err.message})
 })
 
 
-
-
-
-
-
-app.listen(7000, () => {
+app.listen(PORT, () => {
     console.log("it's working")
 })
