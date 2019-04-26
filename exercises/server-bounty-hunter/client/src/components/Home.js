@@ -1,19 +1,30 @@
 import React, { Component } from 'react'
+import Bounty from "./Bounty"
+import { withProvider } from '../DBProvider';
 
-export default class Home extends Component {
+class Home extends Component {
+
+componentDidMount(){
+  this.props.getBounties()
+}
+
   render() {
-    return (
-      <div>
-        
-      </div>
-    )
+    const mappedBounties = this.props.bounties.map((props) => <Bounty props={props} key={props._id}/>)
+      return(
+        <div>
+          {mappedBounties}
+        </div>
+      )
   }
 }
+
+export default withProvider(Home)
 
 
 //Will need to use Routers
     //Pages:
-    //--main page with: get button
+    //--main page with: bounties >> get bounties on component did mount
+      //-put the get inside of a function in the provider and do didMount on component
     //--post page with: input form (required fields)
     //--put page with: input form (non-required fields)
     //STATIC ELEMENTS: 
@@ -33,3 +44,8 @@ export default class Home extends Component {
 //extra time:
     //add images
     //snazzy nav bar
+
+//if I have two forms do I need two providers?
+  //-not necessarily, but if we do want to do that:
+  //-I think we can just wrap the second one around the component that needs it
+  //-and the main one around everything

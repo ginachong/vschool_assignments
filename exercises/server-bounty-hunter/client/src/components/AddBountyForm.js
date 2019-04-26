@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { withProvider } from '../DBProvider';
 
-export default class BountyForm extends Component {
+class BountyForm extends Component {
     constructor(){
         super()
         this.state(
@@ -24,6 +25,6 @@ export default class BountyForm extends Component {
   }
 }
 
-
+export default withProvider(BountyForm)
 
 

@@ -2,49 +2,6 @@ const express = require('express')
 const bountiesRouter = express.Router()
 const Bounty = require("../models/bountySchema.js")
 
-// let bounties = [
-//     {
-//         firstName: "Uncle",
-//         lastName: "Owen",
-//         living: false,
-//         bountyAmount: 1000,
-//         type: "Jedi",
-//         _id: uuidv4(),
-//     },
-//     {
-//         firstName: "Ewan",
-//         lastName: "McGregor",
-//         living: true,
-//         bountyAmount: 50000,
-//         type: "Jedi",
-//         _id: uuidv4(),
-//     },
-//     {
-//         firstName: "Yoda",
-//         lastName: "",
-//         living: false,
-//         bountyAmount: 1000000,
-//         type: "Jedi",
-//         _id: uuidv4(),
-//     },
-//     {
-//         firstName: "Darth",
-//         lastName: "Sidious",
-//         living: false,
-//         bountyAmount: 50000,
-//         type: "Sith",
-//         _id: uuidv4(),
-//     },
-//     {
-//         firstName: "hot",
-//         lastName: "guy",
-//         living: true,
-//         bountyAmount: 1000000,
-//         type: "Sith",
-//         _id: uuidv4(),
-//     },
-// ]
-
 bountiesRouter.get("/", (req, res, next) => {
     Bounty.find((err, bounties) => {
         if(err){
@@ -64,6 +21,42 @@ bountiesRouter.post("/", (req, res, next) => {
         }
         return res.status(201).send(newSavedBounty)
     })
+})
+
+bountiesRouter.get("/:_id", (req, res, next) => {
+    Bounty.findOne({_id: req.params._id}, (err, bounty) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(bounty)
+    })
+})
+
+bountiesRouter.delete("/:_id", (req, res, next) => {
+    Bounty.findOneAndRemove({_id: req.params._id}, (err, bountyToRemove) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(202).send(bountyToRemove)
+    })
+})
+
+bountiesRouter.put("/:_id", (req, res, next) => {
+    Bounty.findOneAndUpdate(
+        {_id: req.params._id},
+        req.body,
+        {new: true},
+        (err, updatedBounty) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(201).send(updatedBounty)
+        }
+
+    )
 })
 
 // bountiesRouter.delete("/bounties/:_id", (req, res) => {

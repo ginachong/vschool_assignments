@@ -1,14 +1,16 @@
 import React from 'react'
-import BountyForm from "./AddBountyForm"
+import AddBountyForm from "./components/AddBountyForm"
+import Home from "./components/Home"
+import { Switch, Route } from 'react-router-dom'
 
 export default function App() {
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       <Switch>
-        <Home />
-        <AddBountyForm />
-        <EditBountyForm />
+        <Route exact path="/"         render={(rProps) => <Home {...rProps}/>}/>
+        {/* <Route path="/addbountyform"  render={(rProps) => <AddBountyForm {...rProps}/>}/> */}
+        {/* <Route path="/editform"   render={(rProps) => <EditBountyForm {...rProps}/>}/> */}
       </Switch>
     </div>
   )
@@ -17,6 +19,6 @@ export default function App() {
 //To Do:
 
 // -do i need a provider?
-// --no
+  // --no
 // -keep state in form 
 
