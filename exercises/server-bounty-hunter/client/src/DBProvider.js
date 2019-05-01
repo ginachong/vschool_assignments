@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 const axios = require('axios')
-const Consumer = React.createContext
+const DBContext= React.createContext()
 
 export default class DBProvider extends Component {
     constructor(){
@@ -12,6 +12,7 @@ export default class DBProvider extends Component {
 
     getBounties = () => {
         axios.get("/bounties").then(res => {
+            console.log(res)
             this.setState({bounties: res.data})
             console.log(this.state.bounties)
         })
@@ -21,18 +22,18 @@ export default class DBProvider extends Component {
 
   render() {
     return (
-        <DBProvider value={{
+        <DBContext.Provider value={{
             ...this.state,
             getBounties: this.getBounties,
             }}>
             {this.props.children}
-        </DBProvider>
+        </DBContext.Provider>
     )
   }
 }
 
 export const withProvider = C => props => (
-    <Consumer>
+    <DBContext.Consumer>
         {value => <C {...value}{...props}/>}
-    </Consumer>
+    </DBContext.Consumer>
 )

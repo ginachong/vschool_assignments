@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+form {
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  font-family: 'Slabo 27px', serif;
+  font-size: 18px;
+}
+
+.label {
+  display: block;
+}
+
+.smokeQ, .drinkQ, .exerciseQ {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+  padding: 30px;
+  line-height: 45px;
+}
+
+form div:nth-child(3){
+  border-bottom: none;
+}
+
+form div label {
+  margin-right: 25px;
+}
+
+.exerciseNote {
+  font-size: 15px;
+  line-height: 6px;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+  
+html, body { 
+    margin: 0px; 
+    height: 100%; 
+    background-color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.meter-container > h1 {
+    font-size: 40vh;
+    margin: 0;
+    color: #1967e5
+}
+
+.progressBar {
+    width: 50%;
+    transition: width 1s
+}
+
+.progressBar:hover {
+    width: 87%
+}

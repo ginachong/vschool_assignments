@@ -9,7 +9,7 @@ componentDidMount(){
 }
 
   render() {
-    const mappedBounties = this.props.bounties.map((props) => <Bounty props={props} key={props._id}/>)
+    const mappedBounties = this.props.bounties.map((bounty) => <Bounty {...bounty} key={bounty._id}/>)
       return(
         <div>
           {mappedBounties}

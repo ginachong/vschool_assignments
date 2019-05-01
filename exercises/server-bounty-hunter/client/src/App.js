@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom'
 export default function App() {
   return (
     <div>
+ 
       {/* <Nav /> */}
       <Switch>
         <Route exact path="/"         render={(rProps) => <Home {...rProps}/>}/>

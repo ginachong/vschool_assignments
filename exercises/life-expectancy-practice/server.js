@@ -9,11 +9,11 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 //Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/bounties', {useNewUrlParser: true}, () => {
+mongoose.connect('mongodb://localhost:27017/users', {useNewUrlParser: true}, () => {
     console.log("connected to the DB")
 })
 
-app.use("/bounties", require('./routes/bountiesRouter.js'))
+app.use("/users", require('./routes.js'))
 
 //Global Error Handler
 app.use((err, req, res, next) => {
