@@ -1,0 +1,8 @@
+#wins {
+    display: inline-block;
+    margin-right: 100px;
+}
+
+#losses {
+    display: inline-block
+}

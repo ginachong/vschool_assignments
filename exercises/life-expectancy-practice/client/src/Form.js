@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import { withDataProvider } from './DataProvider';
+import Axios from 'axios';
 
 const style = {
     display: "inline"
@@ -9,7 +10,7 @@ const style = {
 function Form(props) {
 
     return (
-            <form>
+            <form onSubmit={props.handleSubmit}>
                 <div className="smokeQ">
                     <label className="label">Do you smoke?</label>
                     <input 
@@ -76,6 +77,7 @@ function Form(props) {
                     <p style={style}> exercise.</p>
                     <p className="exerciseNote">*moderate = you can speak but cannot sing</p>
                     <p className="exerciseNote">*vigorous = you can only say a few words before needing to take a break</p>
+                    <button>Compare your results to other users</button>
                 </div>
             </form>
     )
@@ -83,3 +85,20 @@ function Form(props) {
 
 
 export default withDataProvider(Form)
+
+
+                //add to state: currentUser: {doesSmoke: false, drink: "", exerciseIntensity: ""} (assuming we're changing the schema)
+                //also in DataProvider: 
+                //    addNewUser = newUser => {
+                //     axios.post('/expectancy', newUser).then(res => {
+                //         console.log(res)
+                //     })
+                // }
+                // handleSubmit = e => {
+                //      e.preventDefault()
+                //      props.addNewUser(props.currentUser)
+                //      window.open('/useraverage')
+                // }
+                //add handleSubmit to provider value
+                //in form tag:  onSubmit={this.props.handleSubmit}
+                //bottom of form: <button>Compare your results to other users</button>

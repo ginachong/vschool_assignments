@@ -14,7 +14,11 @@ export default class DataProvider extends Component {
             // METER
             progress: 0,
             limit: 100,
-            personalScore: 78
+            personalScore: 78,
+            currentUser: {  doesSmoke: false, 
+                            drink: "0-5", 
+                            exerciseIntensity: "0 Hours Per Week"
+                         }
         }
         this.intervalID = null
     }
@@ -48,6 +52,18 @@ export default class DataProvider extends Component {
         this.setState({[e.target.name]: e.target.value})
     }
 
+    addNewUser = newUser => {
+        axios.post('/users', newUser).then(res => {
+        console.log(res.data)
+        })
+    }
+
+    handleSubmit = e => {
+        e.preventDefault()
+        this.addNewUser(this.state.currentUser)
+        // window.open('/useraverage')
+}
+
   render() {
     return (
       <Provider value={{
@@ -55,6 +71,7 @@ export default class DataProvider extends Component {
           getAvg: this.getAvg,
           handleChange: this.handleChange,
           postUser: this.postUser,
+          handleSubmit: this.handleSubmit,
       }}>
         {this.props.children}
       </Provider>
